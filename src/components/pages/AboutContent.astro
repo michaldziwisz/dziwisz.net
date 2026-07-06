@@ -1,0 +1,32 @@
+---
+import { useTranslations, localizedPath, type Lang } from '../../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section class="page-intro" aria-labelledby="about-heading">
+  <div class="container narrow">
+    <h1 id="about-heading">{t('about.heading')}</h1>
+    <p class="lede">{t('about.p1')}</p>
+    <p>{t('about.p2')}</p>
+    <p>{t('about.p3')}</p>
+    <p class="about-cta">
+      <a class="btn btn-primary" href={localizedPath('/czym-sie-zajmuje', lang)}>
+        {t('about.workLink')}
+      </a>
+    </p>
+  </div>
+</section>
+
+<style>
+  .narrow {
+    max-width: 52rem;
+  }
+  .about-cta {
+    margin-top: var(--space-4);
+  }
+</style>

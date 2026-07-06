@@ -1,0 +1,279 @@
+/* ============================================================
+   Motyw „Cichy gabinet" — dziwisz.net
+   Ciemny, elegancki minimalizm; ciepły bursztynowy akcent.
+   Kontrast dobrany >= WCAG 2.2 AA (tekst dąży do AAA 7:1).
+   ============================================================ */
+
+/* ---------- Zmienne: tryb ciemny (domyślny) ---------- */
+:root {
+  color-scheme: dark;
+
+  /* Tła */
+  --bg: #14151a;          /* bardzo ciemny grafit (atrament), nie czerń */
+  --bg-elev: #1c1e26;     /* karty, wyniesione elementy */
+  --bg-elev-2: #23262f;   /* hover kart */
+
+  /* Tekst */
+  --text: #ecebe6;        /* przygaszona biel na grafit ~ 14.5:1 */
+  --text-muted: #b3b2ab;  /* tekst drugorzędny ~ 8:1 */
+  --text-faint: #8b8a84;  /* metadane ~ 5:1 (AA dla dużego/UI) */
+
+  /* Akcent — ciepły bursztyn/miód */
+  --accent: #f0b429;         /* bursztyn na grafit ~ 9.7:1 */
+  --accent-strong: #f6c343;  /* jaśniejszy wariant hover */
+  --accent-ink: #14151a;     /* tekst na tle akcentu (ciemny) */
+
+  /* Linie, obrysy */
+  --border: #2e3038;
+  --border-strong: #3a3d47;
+
+  /* Fokus */
+  --focus: var(--accent-strong);
+
+  /* Typografia */
+  --font-serif: 'Fraunces', 'Georgia', 'Times New Roman', serif;
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+
+  /* Wymiary */
+  --measure: 68ch;        /* maks. szerokość kolumny tekstu */
+  --max-width: 72rem;     /* maks. szerokość układu */
+  --radius: 14px;
+  --radius-sm: 8px;
+
+  /* Rytm pionowy */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6rem;
+}
+
+/* ---------- Tryb jasny ---------- */
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --bg: #f7f5ef;          /* ciepła kość słoniowa */
+  --bg-elev: #ffffff;
+  --bg-elev-2: #f0ede4;
+
+  --text: #22232a;        /* prawie-czerń na kremie ~ 13:1 */
+  --text-muted: #4f5058;  /* ~ 7:1 */
+  --text-faint: #6a6b73;  /* ~ 5:1 */
+
+  --accent: #7d5600;         /* ciemniejszy bursztyn dla kontrastu na jasnym ~ 6.8:1 */
+  --accent-strong: #664600;  /* hover ~ 9:1 */
+  --accent-ink: #ffffff;
+
+  --border: #ddd8cc;
+  --border-strong: #c9c3b3;
+
+  --focus: var(--accent);
+}
+
+/* ---------- Reset i podstawy ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 0.96rem + 0.3vw, 1.125rem);
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------- Nagłówki: szeryfowe, z oddechem ---------- */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin: 0 0 var(--space-2);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 1.6rem + 3vw, 3.9rem);
+}
+h2 {
+  font-size: clamp(1.7rem, 1.3rem + 1.7vw, 2.6rem);
+}
+h3 {
+  font-size: clamp(1.25rem, 1.1rem + 0.7vw, 1.55rem);
+}
+
+p {
+  margin: 0 0 var(--space-2);
+  max-width: var(--measure);
+}
+
+/* ---------- Linki ---------- */
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+a:hover {
+  color: var(--accent-strong);
+}
+
+/* ---------- Fokus: wyraźny, na akcencie ---------- */
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* ---------- Skip link ---------- */
+.skip-link {
+  position: absolute;
+  left: var(--space-2);
+  top: -100px;
+  z-index: 1000;
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: var(--space-2);
+  color: var(--accent-ink);
+}
+
+/* ---------- Kontener ---------- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: clamp(1.1rem, 0.5rem + 3vw, 2.5rem);
+}
+
+/* ---------- Główna treść ---------- */
+main {
+  flex: 1 0 auto;
+}
+
+section {
+  padding-block: var(--space-5);
+}
+
+/* ---------- Przyciski ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.7rem 1.3rem;
+  border-radius: var(--radius-sm);
+  border: 2px solid transparent;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease,
+    color 0.15s ease, transform 0.15s ease;
+}
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+.btn-primary:hover {
+  background: var(--accent-strong);
+  color: var(--accent-ink);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+.btn-ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ---------- Znaczniki (tagi) ---------- */
+.tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--bg-elev-2);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+/* ---------- Elementy pomocnicze ---------- */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 var(--space-1);
+}
+.lede {
+  font-size: clamp(1.15rem, 1.05rem + 0.5vw, 1.4rem);
+  color: var(--text-muted);
+  max-width: var(--measure);
+}
+.muted {
+  color: var(--text-muted);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Poszanowanie ograniczenia ruchu ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

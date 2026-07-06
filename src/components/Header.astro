@@ -1,0 +1,306 @@
+---
+import { useTranslations, localizedPath, type Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  path: string; // ścieżka bez prefiksu języka, np. '/o-mnie'
+}
+const { lang, path } = Astro.props;
+const t = useTranslations(lang);
+
+const otherLang: Lang = lang === 'pl' ? 'en' : 'pl';
+const otherLangPath = localizedPath(path, otherLang);
+
+const nav = [
+  { key: 'nav.home', href: '/' },
+  { key: 'nav.about', href: '/o-mnie' },
+  { key: 'nav.work', href: '/czym-sie-zajmuje' },
+  { key: 'nav.contact', href: '/kontakt' },
+] as const;
+
+function isCurrent(href: string) {
+  return href === path;
+}
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href={localizedPath('/', lang)}>Michał&nbsp;Dziwisz</a>
+
+    <button
+      type="button"
+      class="menu-toggle"
+      aria-expanded="false"
+      aria-controls="primary-nav"
+      data-open={t('nav.menu.open')}
+      data-close={t('nav.menu.close')}
+    >
+      <span class="menu-toggle-bars" aria-hidden="true"></span>
+      <span class="menu-toggle-label">{t('nav.menu.open')}</span>
+    </button>
+
+    <nav id="primary-nav" class="site-nav" aria-label={t('nav.label')}>
+      <ul>
+        {
+          nav.map((item) => (
+            <li>
+              <a
+                href={localizedPath(item.href, lang)}
+                aria-current={isCurrent(item.href) ? 'page' : undefined}
+                class={isCurrent(item.href) ? 'is-current' : undefined}
+              >
+                {t(item.key)}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+
+      <div class="header-tools">
+        <a class="lang-switch" href={otherLangPath} hreflang={otherLang} lang={otherLang}>
+          <span aria-hidden="true">{otherLang.toUpperCase()}</span>
+          <span class="visually-hidden">{t('lang.switch')}</span>
+        </a>
+
+        <button type="button" class="theme-toggle" aria-label={t('theme.toggle')} aria-pressed="false">
+          <span class="theme-icon theme-icon-dark" aria-hidden="true">☾</span>
+          <span class="theme-icon theme-icon-light" aria-hidden="true">☀</span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+    min-height: 4.25rem;
+    flex-wrap: wrap;
+  }
+  .brand {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--text);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .brand:hover {
+    color: var(--accent);
+  }
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+  .site-nav ul {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .site-nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.35rem 0;
+    border-bottom: 2px solid transparent;
+  }
+  .site-nav a:hover {
+    color: var(--text);
+  }
+  .site-nav a.is-current {
+    color: var(--text);
+    border-bottom-color: var(--accent);
+  }
+
+  .header-tools {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding-left: var(--space-2);
+    border-left: 1px solid var(--border);
+  }
+  .lang-switch {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+  }
+  .lang-switch:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .theme-toggle {
+    display: inline-grid;
+    place-items: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: transparent;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+  .theme-toggle:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+  .theme-icon {
+    grid-area: 1 / 1;
+  }
+  /* Domyślnie (ciemny): pokaż słońce (=przełącz na jasny). W jasnym: księżyc. */
+  .theme-icon-dark {
+    display: none;
+  }
+  .theme-icon-light {
+    display: inline;
+  }
+  :root[data-theme='light'] .theme-icon-light {
+    display: none;
+  }
+  :root[data-theme='light'] .theme-icon-dark {
+    display: inline;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  /* ---------- Telefon / wąskie ekrany ---------- */
+  @media (max-width: 46rem) {
+    .menu-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      color: var(--text);
+      font-weight: 600;
+      padding: 0.5rem 0.8rem;
+      cursor: pointer;
+    }
+    .menu-toggle-bars {
+      width: 18px;
+      height: 2px;
+      background: currentColor;
+      position: relative;
+    }
+    .menu-toggle-bars::before,
+    .menu-toggle-bars::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 2px;
+      background: currentColor;
+    }
+    .menu-toggle-bars::before {
+      top: -6px;
+    }
+    .menu-toggle-bars::after {
+      top: 6px;
+    }
+
+    .site-nav {
+      display: none;
+      flex-direction: column;
+      align-items: stretch;
+      gap: var(--space-2);
+      width: 100%;
+      padding: var(--space-2) 0 var(--space-3);
+    }
+    .site-nav.is-open {
+      display: flex;
+    }
+    .site-nav ul {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      width: 100%;
+    }
+    .site-nav li {
+      border-bottom: 1px solid var(--border);
+    }
+    .site-nav a {
+      display: block;
+      padding: 0.8rem 0;
+    }
+    .site-nav a.is-current {
+      border-bottom-color: transparent;
+      color: var(--accent);
+    }
+    .header-tools {
+      border-left: none;
+      padding-left: 0;
+      padding-top: var(--space-1);
+    }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    // Menu mobilne
+    var toggle = document.querySelector('.menu-toggle');
+    var nav = document.getElementById('primary-nav');
+    if (toggle && nav) {
+      var label = toggle.querySelector('.menu-toggle-label');
+      toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (label) {
+          label.textContent = open
+            ? toggle.getAttribute('data-close') || 'Zamknij menu'
+            : toggle.getAttribute('data-open') || 'Menu';
+        }
+      });
+    }
+
+    // Przełącznik motywu
+    var themeBtn = document.querySelector('.theme-toggle');
+    if (themeBtn) {
+      function currentTheme() {
+        return document.documentElement.getAttribute('data-theme') === 'light'
+          ? 'light'
+          : 'dark';
+      }
+      function syncPressed() {
+        themeBtn.setAttribute('aria-pressed', currentTheme() === 'light' ? 'true' : 'false');
+      }
+      syncPressed();
+      themeBtn.addEventListener('click', function () {
+        var next = currentTheme() === 'light' ? 'dark' : 'light';
+        if (next === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+        }
+        try {
+          localStorage.setItem('theme', next);
+        } catch (e) {}
+        syncPressed();
+      });
+    }
+  })();
+</script>

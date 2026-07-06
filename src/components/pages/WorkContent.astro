@@ -1,0 +1,42 @@
+---
+import { useTranslations, type Lang } from '../../i18n/ui';
+import { projects } from '../../data/projekty';
+import ProjectCard from '../ProjectCard.astro';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section class="page-intro" aria-labelledby="work-heading">
+  <div class="container">
+    <h1 id="work-heading">{t('work.heading')}</h1>
+    <p class="lede">{t('work.intro')}</p>
+
+    <ul class="card-grid" role="list">
+      {
+        projects.map((project) => (
+          <li>
+            <ProjectCard project={project} lang={lang} headingLevel={2} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+    gap: var(--space-3);
+    list-style: none;
+    margin: var(--space-4) 0 0;
+    padding: 0;
+  }
+  .card-grid > li {
+    display: flex;
+  }
+</style>

@@ -1,0 +1,82 @@
+---
+import { useTranslations, type Lang } from '../../i18n/ui';
+import { contact, socials } from '../../data/kontakt';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const email = `${contact.emailUser}@${contact.emailDomain}`;
+---
+
+<section class="page-intro" aria-labelledby="contact-heading">
+  <div class="container narrow">
+    <h1 id="contact-heading">{t('contact.heading')}</h1>
+    <p class="lede">{t('contact.intro')}</p>
+
+    <div class="contact-block">
+      <h2>{t('contact.email')}</h2>
+      <p>
+        <a class="contact-email" href={`mailto:${email}`}>{email}</a>
+      </p>
+    </div>
+
+    {
+      socials.length > 0 && (
+        <div class="contact-block">
+          <h2>{t('contact.elsewhere')}</h2>
+          <ul class="social-list" role="list">
+            {socials.map((s) => (
+              <li>
+                <a class="social-link" href={s.href} rel="me noopener">
+                  {s.label}
+                  <span aria-hidden="true"> ↗</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  .narrow {
+    max-width: 52rem;
+  }
+  .contact-block {
+    margin-top: var(--space-4);
+  }
+  .contact-block h2 {
+    font-size: 1.4rem;
+    margin-bottom: var(--space-1);
+  }
+  .contact-email {
+    font-size: clamp(1.2rem, 1rem + 0.9vw, 1.6rem);
+    font-weight: 600;
+  }
+  .social-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+  }
+  .social-link:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+</style>

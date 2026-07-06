@@ -1,0 +1,46 @@
+---
+import { useTranslations, localizedPath, type Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-note muted">
+      {t('footer.built')}
+      <a href="https://github.com/michaldziwisz/dziwisz.net">{t('footer.source')}</a>.
+    </p>
+    <p class="footer-copy muted">
+      &copy; {year} Michał Dziwisz. {t('footer.rights')}
+    </p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--border);
+    padding-block: var(--space-4);
+    margin-top: var(--space-5);
+  }
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--space-2);
+    align-items: baseline;
+  }
+  .footer-note {
+    margin: 0;
+    max-width: 46ch;
+    font-size: 0.95rem;
+  }
+  .footer-copy {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+</style>

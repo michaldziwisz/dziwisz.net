@@ -1,0 +1,11 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import AboutContent from '../../components/pages/AboutContent.astro';
+import { useTranslations } from '../../i18n/ui';
+const lang = 'en';
+const t = useTranslations(lang);
+---
+
+<Layout lang={lang} path="/o-mnie" title={t('nav.about')}>
+  <AboutContent lang={lang} />
+</Layout>

@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import WorkContent from '../components/pages/WorkContent.astro';
+import { useTranslations } from '../i18n/ui';
+const lang = 'pl';
+const t = useTranslations(lang);
+---
+
+<Layout lang={lang} path="/czym-sie-zajmuje" title={t('nav.work')}>
+  <WorkContent lang={lang} />
+</Layout>

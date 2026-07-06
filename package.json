@@ -1,0 +1,17 @@
+{
+  "name": "dziwisz-net",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Strona domowa Michała Dziwisza — dziwisz.net",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@fontsource-variable/fraunces": "^5.1.0",
+    "astro": "^4.16.18"
+  }
+}

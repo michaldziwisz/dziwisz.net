@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { useTranslations, localizedPath } from '../i18n/ui';
+const lang = 'pl';
+const t = useTranslations(lang);
+---
+
+<Layout lang={lang} path="/404" title={t('notfound.heading')}>
+  <section class="page-intro">
+    <div class="container narrow">
+      <h1>{t('notfound.heading')}</h1>
+      <p class="lede">{t('notfound.text')}</p>
+      <p>
+        <a class="btn btn-primary" href={localizedPath('/', lang)}>
+          {t('notfound.home')}
+        </a>
+      </p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .narrow {
+    max-width: 52rem;
+  }
+</style>

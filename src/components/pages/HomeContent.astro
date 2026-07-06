@@ -1,0 +1,100 @@
+---
+import { useTranslations, localizedPath, type Lang } from '../../i18n/ui';
+import { projects } from '../../data/projekty';
+import ProjectCard from '../ProjectCard.astro';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const featured = projects.filter((p) => p.featured);
+---
+
+<section class="hero" aria-labelledby="hero-name">
+  <div class="container">
+    <p class="eyebrow">{t('home.hero.eyebrow')}</p>
+    <h1 id="hero-name">Michał Dziwisz</h1>
+    <p class="hero-tagline">{t('site.tagline')}</p>
+    <p class="lede hero-lede">{t('home.hero.lede')}</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href={localizedPath('/czym-sie-zajmuje', lang)}>
+        {t('home.cta.work')}
+      </a>
+      <a class="btn btn-ghost" href={localizedPath('/kontakt', lang)}>
+        {t('home.cta.contact')}
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="home-work" aria-labelledby="home-work-heading">
+  <div class="container">
+    <h2 id="home-work-heading" class="reveal">{t('home.work.heading')}</h2>
+    <ul class="card-grid" role="list">
+      {
+        featured.map((project) => (
+          <li>
+            <ProjectCard project={project} lang={lang} headingLevel={3} />
+          </li>
+        ))
+      }
+    </ul>
+    <p class="home-work-all reveal">
+      <a class="btn btn-ghost" href={localizedPath('/czym-sie-zajmuje', lang)}>
+        {t('home.work.all')}
+      </a>
+    </p>
+  </div>
+</section>
+
+<section class="home-about" aria-labelledby="home-about-heading">
+  <div class="container">
+    <h2 id="home-about-heading" class="reveal">{t('home.about.heading')}</h2>
+    <p class="lede reveal">{t('about.p1')}</p>
+    <p class="reveal">
+      <a class="btn btn-ghost" href={localizedPath('/o-mnie', lang)}>
+        {t('home.about.more')}
+      </a>
+    </p>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding-block: clamp(3.5rem, 2rem + 9vw, 8rem) var(--space-5);
+  }
+  .hero-tagline {
+    font-family: var(--font-serif);
+    font-size: clamp(1.3rem, 1rem + 1.4vw, 2rem);
+    color: var(--accent);
+    margin: 0 0 var(--space-3);
+    max-width: none;
+  }
+  .hero-lede {
+    margin-bottom: var(--space-4);
+  }
+  .hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+    gap: var(--space-3);
+    list-style: none;
+    margin: var(--space-3) 0 0;
+    padding: 0;
+  }
+  .card-grid > li {
+    display: flex;
+  }
+  .home-work-all {
+    margin-top: var(--space-4);
+  }
+  .home-about {
+    padding-top: 0;
+  }
+</style>

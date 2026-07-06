@@ -1,0 +1,21 @@
+# Zależności
+node_modules/
+
+# Build
+dist/
+.astro/
+
+# Środowiskowe
+.env
+.env.production
+.env.local
+
+# System
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+
+# Edytory
+.vscode/
+.idea/

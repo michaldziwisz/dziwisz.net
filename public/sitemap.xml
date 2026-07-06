@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://dziwisz.net/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://dziwisz.net/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dziwisz.net/en/"/>
+  </url>
+  <url>
+    <loc>https://dziwisz.net/o-mnie/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://dziwisz.net/o-mnie/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dziwisz.net/en/o-mnie/"/>
+  </url>
+  <url>
+    <loc>https://dziwisz.net/czym-sie-zajmuje/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://dziwisz.net/czym-sie-zajmuje/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dziwisz.net/en/czym-sie-zajmuje/"/>
+  </url>
+  <url>
+    <loc>https://dziwisz.net/kontakt/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://dziwisz.net/kontakt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dziwisz.net/en/kontakt/"/>
+  </url>
+</urlset>
