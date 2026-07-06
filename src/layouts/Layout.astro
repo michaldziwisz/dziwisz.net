@@ -38,7 +38,8 @@ const canonical = lang === 'pl' ? `${siteUrl}${path}` : `${siteUrl}/en${path ===
     <meta property="og:locale" content={lang === 'pl' ? 'pl_PL' : 'en_US'} />
     <meta name="twitter:card" content="summary" />
 
-    <meta name="theme-color" content="#f4ece0" />
+    <meta name="theme-color" content="#faf4ea" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#241b14" media="(prefers-color-scheme: dark)" />
 
     {/* Ustaw motyw przed renderem, żeby uniknąć mignięcia (FOUC). Domyślny: jasny. */}
     <script is:inline>

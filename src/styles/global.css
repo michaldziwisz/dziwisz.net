@@ -1,32 +1,37 @@
 /* ============================================================
-   Motyw „Latte" — dziwisz.net
-   Ciepła kremowa baza (cappuccino/latte); akcent: zieleń szałwiowa.
-   Domyślnie jasny; ciemny wariant „Mokka" pod przełącznikiem.
+   Motyw „Terakota" — dziwisz.net
+   Jasna ciepła porcelana + terakotowo-bursztynowy akcent.
+   Ciepły i przyjazny; z miękką głębią (cienie na kartach).
+   Domyślnie jasny; ciemny wariant „Węgiel i miedź" pod przełącznikiem.
    Kontrast dobrany >= WCAG 2.2 AA.
    ============================================================ */
 
-/* ---------- Zmienne: tryb jasny „Latte" (domyślny) ---------- */
+/* ---------- Zmienne: tryb jasny „Terakota" (domyślny) ---------- */
 :root {
   color-scheme: light;
 
-  /* Tła — ciepła kremowa baza (latte/cappuccino) */
-  --bg: #f4ece0;          /* ciepłe latte / pianka */
-  --bg-elev: #fbf6ee;     /* karty, wyniesione elementy */
-  --bg-elev-2: #ece0cf;   /* hover kart */
+  /* Tła — jasna, czysta ciepła porcelana */
+  --bg: #faf4ea;          /* jasna ciepła porcelana */
+  --bg-elev: #fffdf9;     /* karty prawie białe — dają lekkość */
+  --bg-elev-2: #f6ede0;   /* hover kart */
 
   /* Tekst — ciepłe espresso, nie czerń */
-  --text: #2a2018;        /* espresso na kremie ~ 12:1 */
-  --text-muted: #574b3d;  /* tekst drugorzędny ~ 6.8:1 */
-  --text-faint: #6d6151;  /* metadane ~ 5:1 */
+  --text: #2c2019;        /* espresso na porcelanie ~ 14.5:1 */
+  --text-muted: #5a4a3c;  /* tekst drugorzędny ~ 7.7:1 */
+  --text-faint: #6e5d4c;  /* metadane ~ 5.8:1 */
 
-  /* Akcent — przygaszona zieleń szałwiowa/eukaliptusowa */
-  --accent: #3d6147;         /* głęboka szałwia na kremie ~ 5.6:1 */
-  --accent-strong: #2f4d38;  /* hover, ciemniejszy ~ 8:1 */
-  --accent-ink: #fbf6ee;     /* tekst na tle akcentu (jasny) */
+  /* Akcent — terakota / palona pomarańcz (ciepła, przyjazna) */
+  --accent: #a8451f;         /* terakota na porcelanie ~ 5.4:1 */
+  --accent-strong: #8a3616;  /* hover, głębsza ~ 7.3:1 */
+  --accent-ink: #fffdf9;     /* tekst na tle akcentu (jasny) */
 
   /* Linie, obrysy */
-  --border: #ddd0bd;
-  --border-strong: #c7b8a1;
+  --border: #e7dccb;
+  --border-strong: #d3c2a9;
+
+  /* Cienie — miękkie, ciepłe (dają głębię, nie ciężar) */
+  --shadow: 0 4px 20px rgba(90, 60, 30, 0.09);
+  --shadow-hover: 0 12px 36px rgba(90, 60, 30, 0.16);
 
   /* Fokus */
   --focus: var(--accent);
@@ -52,24 +57,28 @@
   --space-6: 6rem;
 }
 
-/* ---------- Tryb ciemny „Mokka" (ocieplony, nie chłodny grafit) ---------- */
+/* ---------- Tryb ciemny „Węgiel i miedź" (ocieplony) ---------- */
 :root[data-theme='dark'] {
   color-scheme: dark;
 
-  --bg: #201a14;          /* ciemna mokka/espresso, ciepła nie grafitowa */
-  --bg-elev: #2b241c;
-  --bg-elev-2: #362d23;
+  --bg: #241b14;          /* ciepły węgiel/espresso, nie chłodny grafit */
+  --bg-elev: #30251b;
+  --bg-elev-2: #3c2f22;
 
-  --text: #f0e8dc;        /* ciepła kość na mokce ~ 13:1 */
-  --text-muted: #c3b7a5;  /* ~ 8:1 */
-  --text-faint: #9a8d7b;  /* ~ 5:1 */
+  --text: #f2e9dd;        /* ciepła kość ~ 14:1 */
+  --text-muted: #cdbda8;  /* ~ 9.2:1 */
+  --text-faint: #a8937c;  /* ~ 5.7:1 */
 
-  --accent: #8fb99a;         /* jaśniejsza szałwia dla kontrastu na ciemnym ~ 7.5:1 */
-  --accent-strong: #a7ccb0;  /* hover ~ 9.5:1 */
-  --accent-ink: #201a14;     /* tekst na tle akcentu (ciemny) */
+  --accent: #e8865a;         /* rozgrzana terakota/miedź dla kontrastu ~ 6.4:1 */
+  --accent-strong: #f0a17d;  /* hover ~ 8.1:1 */
+  --accent-ink: #241b14;     /* tekst na tle akcentu (ciemny) */
 
-  --border: #3d3327;
-  --border-strong: #4a3f31;
+  --border: #43342450;
+  --border-strong: #4d3c2a;
+
+  /* Cienie — mocniejsze na ciemnym tle */
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  --shadow-hover: 0 12px 36px rgba(0, 0, 0, 0.5);
 
   --focus: var(--accent-strong);
 }
