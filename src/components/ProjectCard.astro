@@ -4,6 +4,7 @@ import {
   projectName,
   projectDesc,
   linkLabel,
+  linkA11yLabel,
   tagLabels,
 } from '../data/projekty';
 import type { Lang } from '../i18n/ui';
@@ -18,7 +19,6 @@ const { project, lang, headingLevel = 3 } = Astro.props;
 const Heading = `h${headingLevel}` as 'h2' | 'h3';
 const name = projectName(project, lang);
 const desc = projectDesc(project, lang);
-const hasMultiple = project.links.length > 1;
 ---
 
 <article class="card reveal">
@@ -32,12 +32,14 @@ const hasMultiple = project.links.length > 1;
   <div class="card-links">
     {
       project.links.map((link) => (
-        <a class="card-link" href={link.href} rel="noopener">
+        <a
+          class="card-link"
+          href={link.href}
+          rel="noopener"
+          aria-label={linkA11yLabel(link, lang, name)}
+        >
           <span aria-hidden="true">↗</span>
-          <span>
-            {hasMultiple ? linkLabel(link, lang) : linkLabel(link, lang)}
-            <span class="visually-hidden"> — {name}</span>
-          </span>
+          <span aria-hidden="true">{linkLabel(link, lang)}</span>
         </a>
       ))
     }

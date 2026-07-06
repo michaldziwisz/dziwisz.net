@@ -40,7 +40,7 @@ export const ui = {
       'Buduję rzeczy, w których dostępność cyfrowa jest fundamentem, a nie dodatkiem. Praca i pasja to u mnie jeden nurt: media, technologia i ludzie.',
     'home.cta.work': 'Zobacz, czym się zajmuję',
     'home.cta.contact': 'Napisz do mnie',
-    'home.work.heading': 'Wybrane rzeczy, które robię',
+    'home.work.heading': 'Wybrane rzeczy, które tworzę',
     'home.work.all': 'Zobacz wszystko',
     'home.about.heading': 'Kilka słów o mnie',
     'home.about.more': 'Więcej o mnie',

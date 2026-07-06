@@ -3,9 +3,16 @@ import type { Lang } from '../i18n/ui';
 export type Tag = 'dostepnosc' | 'media' | 'kod';
 
 export interface ProjectLink {
-  // Klucz tłumaczenia etykiety: 'work.visit' | 'work.repo' | własny tekst per język
+  /** Tekst widoczny na przycisku (krótki). */
   labelPl: string;
   labelEn: string;
+  /**
+   * Pełna, naturalna nazwa dostępna (czytnik ekranu) — bez myślników,
+   * z poprawną odmianą, np. „Posłuchaj Radia DHT”. Gdy pominięta,
+   * karta złoży sensowną nazwę z etykiety i tytułu projektu.
+   */
+  a11yPl?: string;
+  a11yEn?: string;
   href: string;
 }
 
@@ -38,7 +45,13 @@ export const projects: Project[] = [
       'A podcast platform about technology and accessibility for blind and partially sighted people. I am its founder and editor-in-chief.',
     tags: ['media', 'dostepnosc'],
     links: [
-      { labelPl: 'Otwórz serwis', labelEn: 'Open the site', href: 'https://tyflopodcast.net' },
+      {
+        labelPl: 'Otwórz serwis',
+        labelEn: 'Open the site',
+        a11yPl: 'Otwórz serwis TyfloPodcast',
+        a11yEn: 'Open the TyfloPodcast site',
+        href: 'https://tyflopodcast.net',
+      },
     ],
   },
   {
@@ -47,26 +60,38 @@ export const projects: Project[] = [
     namePl: 'Radio DHT',
     nameEn: 'Radio DHT',
     descPl:
-      'Stacja radiowa internetowa — kanał główny. Jestem współtwórcą formatu tego kanału.',
+      'Internetowa stacja radiowa — kanał główny. Jestem współtwórcą formatu tego kanału.',
     descEn:
       'An internet radio station — the main channel. I am a co-creator of the channel format.',
     tags: ['media'],
     links: [
-      { labelPl: 'Posłuchaj', labelEn: 'Listen', href: 'https://radiodht.com' },
+      {
+        labelPl: 'Posłuchaj',
+        labelEn: 'Listen',
+        a11yPl: 'Posłuchaj Radia DHT',
+        a11yEn: 'Listen to Radio DHT',
+        href: 'https://radiodht.com',
+      },
     ],
   },
   {
     id: 'utilitia',
     featured: true,
-    namePl: 'UTILITIA',
-    nameEn: 'UTILITIA',
+    namePl: 'UTILITIA 2.0',
+    nameEn: 'UTILITIA 2.0',
     descPl:
       'Narzędzie do badania dostępności cyfrowej — analizuje strony i dokumenty pod kątem zgodności ze standardami (WCAG, PDF/UA). Wersja rozwojowa.',
     descEn:
       'A tool for auditing digital accessibility — it analyses websites and documents against standards (WCAG, PDF/UA). Beta version.',
     tags: ['dostepnosc', 'kod'],
     links: [
-      { labelPl: 'Otwórz (beta)', labelEn: 'Open (beta)', href: 'https://beta.utilitia.pl' },
+      {
+        labelPl: 'Otwórz betę',
+        labelEn: 'Open the beta',
+        a11yPl: 'Otwórz betę UTILITII',
+        a11yEn: 'Open the UTILITIA beta',
+        href: 'https://beta.utilitia.pl',
+      },
     ],
   },
   {
@@ -80,7 +105,13 @@ export const projects: Project[] = [
       'Simple Accessible Radio Automation — an accessible radio automation system. Open-source software written in Python.',
     tags: ['media', 'kod', 'dostepnosc'],
     links: [
-      { labelPl: 'Kod źródłowy', labelEn: 'Source code', href: 'https://github.com/michaldziwisz/sara' },
+      {
+        labelPl: 'Kod źródłowy',
+        labelEn: 'Source code',
+        a11yPl: 'Kod źródłowy projektu SARA',
+        a11yEn: 'SARA source code',
+        href: 'https://github.com/michaldziwisz/sara',
+      },
     ],
   },
   {
@@ -94,9 +125,27 @@ export const projects: Project[] = [
       'TyfloPodcast clients for three platforms — Windows, Android and iOS. The interface is designed for accessibility and screen readers (NVDA, TalkBack, VoiceOver).',
     tags: ['media', 'kod', 'dostepnosc'],
     links: [
-      { labelPl: 'Windows', labelEn: 'Windows', href: 'https://github.com/michaldziwisz/TyfloCentrumWindows' },
-      { labelPl: 'Android', labelEn: 'Android', href: 'https://github.com/michaldziwisz/tyflocentrum_android' },
-      { labelPl: 'iOS', labelEn: 'iOS', href: 'https://github.com/michaldziwisz/Tyflocentrum' },
+      {
+        labelPl: 'Windows',
+        labelEn: 'Windows',
+        a11yPl: 'Pobierz TyfloCentrum na Windows z Microsoft Store',
+        a11yEn: 'Get TyfloCentrum for Windows from the Microsoft Store',
+        href: 'https://apps.microsoft.com/detail/9n62mnlnn9j6?hl=pl-PL&gl=PL',
+      },
+      {
+        labelPl: 'Android',
+        labelEn: 'Android',
+        a11yPl: 'Pobierz TyfloCentrum na Androida z Google Play',
+        a11yEn: 'Get TyfloCentrum for Android from Google Play',
+        href: 'https://play.google.com/store/apps/details?id=net.tyflopodcast.tyflocentrum',
+      },
+      {
+        labelPl: 'iOS',
+        labelEn: 'iOS',
+        a11yPl: 'Pobierz TyfloCentrum na iOS przez TestFlight',
+        a11yEn: 'Get TyfloCentrum for iOS via TestFlight',
+        href: 'https://testflight.apple.com/join/F8vtxp8v',
+      },
     ],
   },
   {
@@ -110,7 +159,13 @@ export const projects: Project[] = [
       'An accessible frontend for e-podroznik.pl: a connection search and stop timetable, friendly to screen readers.',
     tags: ['dostepnosc', 'kod'],
     links: [
-      { labelPl: 'Otwórz', labelEn: 'Open', href: 'https://podroznik.tyflo.eu.org' },
+      {
+        labelPl: 'Otwórz',
+        labelEn: 'Open',
+        a11yPl: 'Otwórz Podróżnika',
+        a11yEn: 'Open Podróżnik',
+        href: 'https://podroznik.tyflo.eu.org',
+      },
     ],
   },
   {
@@ -124,7 +179,53 @@ export const projects: Project[] = [
       'An app for viewing TV and radio programme schedules, friendly to screen reader users.',
     tags: ['media', 'kod'],
     links: [
-      { labelPl: 'Kod źródłowy', labelEn: 'Source code', href: 'https://github.com/michaldziwisz/programista' },
+      {
+        labelPl: 'Pobierz',
+        labelEn: 'Download',
+        a11yPl: 'Pobierz Programistę',
+        a11yEn: 'Download Programista',
+        href: 'https://gitrls.com/michaldziwisz/programista/',
+      },
+    ],
+  },
+  {
+    id: 'shaq-gui',
+    featured: false,
+    namePl: 'SHAQ GUI',
+    nameEn: 'SHAQ GUI',
+    descPl:
+      'Zestaw dostępnych aplikacji GUI dla Windows do rozpoznawania muzyki (Shazam): z pliku, z wejścia lub wyjścia audio oraz aktualizacja „teraz gra” w strumieniu Shoutcast i Icecast.',
+    descEn:
+      'A set of accessible Windows GUI apps for music recognition (Shazam): from a file, from audio input or output, and updating “now playing” on Shoutcast and Icecast streams.',
+    tags: ['media', 'kod', 'dostepnosc'],
+    links: [
+      {
+        labelPl: 'Pobierz',
+        labelEn: 'Download',
+        a11yPl: 'Pobierz SHAQ GUI',
+        a11yEn: 'Download SHAQ GUI',
+        href: 'https://gitrls.com/michaldziwisz/shaq-gui-tools/',
+      },
+    ],
+  },
+  {
+    id: 'winbrowser',
+    featured: false,
+    namePl: 'WinBrowser',
+    nameEn: 'WinBrowser',
+    descPl:
+      'Dostępna przeglądarka GUI dla Windows do archiwów grup dyskusyjnych Usenet (Usenet Archive Toolkit).',
+    descEn:
+      'An accessible Windows GUI browser for Usenet newsgroup archives (Usenet Archive Toolkit).',
+    tags: ['kod', 'dostepnosc'],
+    links: [
+      {
+        labelPl: 'Pobierz',
+        labelEn: 'Download',
+        a11yPl: 'Pobierz WinBrowser',
+        a11yEn: 'Download WinBrowser',
+        href: 'https://gitrls.com/michaldziwisz/winbrowser/',
+      },
     ],
   },
   {
@@ -138,7 +239,13 @@ export const projects: Project[] = [
       'A simple, accessible (NVDA/JAWS) Windows app for removing all digital signatures from PDF files.',
     tags: ['dostepnosc', 'kod'],
     links: [
-      { labelPl: 'Kod źródłowy', labelEn: 'Source code', href: 'https://github.com/michaldziwisz/pdf-signature-remover' },
+      {
+        labelPl: 'Kod źródłowy',
+        labelEn: 'Source code',
+        a11yPl: 'Kod źródłowy PDF Signature Remover',
+        a11yEn: 'PDF Signature Remover source code',
+        href: 'https://github.com/michaldziwisz/pdf-signature-remover',
+      },
     ],
   },
 ];
@@ -151,4 +258,13 @@ export function projectDesc(p: Project, lang: Lang): string {
 }
 export function linkLabel(l: ProjectLink, lang: Lang): string {
   return lang === 'en' ? l.labelEn : l.labelPl;
+}
+/**
+ * Pełna nazwa dostępna linku (dla aria-label). Używa jawnej odmiany z danych,
+ * a w razie jej braku składa naturalnie „<etykieta> <nazwa projektu>”.
+ */
+export function linkA11yLabel(l: ProjectLink, lang: Lang, projectName: string): string {
+  const explicit = lang === 'en' ? l.a11yEn : l.a11yPl;
+  if (explicit) return explicit;
+  return `${linkLabel(l, lang)} ${projectName}`;
 }
