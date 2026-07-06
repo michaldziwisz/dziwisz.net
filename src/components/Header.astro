@@ -62,7 +62,13 @@ function isCurrent(href: string) {
           <span class="visually-hidden">{t('lang.switch')}</span>
         </a>
 
-        <button type="button" class="theme-toggle" aria-label={t('theme.toggle')} aria-pressed="false">
+        <button
+          type="button"
+          class="theme-toggle"
+          aria-label={t('theme.toDark')}
+          data-to-dark={t('theme.toDark')}
+          data-to-light={t('theme.toLight')}
+        >
           <span class="theme-icon theme-icon-dark" aria-hidden="true">☾</span>
           <span class="theme-icon theme-icon-light" aria-hidden="true">☀</span>
         </button>
@@ -285,10 +291,15 @@ function isCurrent(href: string) {
           ? 'dark'
           : 'light';
       }
-      function syncPressed() {
-        themeBtn.setAttribute('aria-pressed', currentTheme() === 'dark' ? 'true' : 'false');
+      function syncLabel() {
+        // Etykieta opisuje AKCJĘ: w trybie jasnym klik włączy ciemny i odwrotnie.
+        var label =
+          currentTheme() === 'dark'
+            ? themeBtn.getAttribute('data-to-light')
+            : themeBtn.getAttribute('data-to-dark');
+        if (label) themeBtn.setAttribute('aria-label', label);
       }
-      syncPressed();
+      syncLabel();
       themeBtn.addEventListener('click', function () {
         var next = currentTheme() === 'dark' ? 'light' : 'dark';
         if (next === 'dark') {
@@ -299,7 +310,7 @@ function isCurrent(href: string) {
         try {
           localStorage.setItem('theme', next);
         } catch (e) {}
-        syncPressed();
+        syncLabel();
       });
     }
   })();
