@@ -13,5 +13,8 @@
   "dependencies": {
     "@fontsource-variable/fraunces": "^5.1.0",
     "astro": "^4.16.18"
+  },
+  "devDependencies": {
+    "wrangler": "^4.86.0"
   }
 }
