@@ -4,7 +4,7 @@
 
 export const contact = {
   // Podmień na swój adres. Rozbity na części utrudnia zbieranie przez boty.
-  emailUser: 'kontakt',
+  emailUser: 'michal',
   emailDomain: 'dziwisz.net',
 };
 
