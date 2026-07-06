@@ -1,34 +1,36 @@
 /* ============================================================
-   Motyw „Cichy gabinet" — dziwisz.net
-   Ciemny, elegancki minimalizm; ciepły bursztynowy akcent.
-   Kontrast dobrany >= WCAG 2.2 AA (tekst dąży do AAA 7:1).
+   Motyw „Latte" — dziwisz.net
+   Ciepła kremowa baza (cappuccino/latte); akcent: zieleń szałwiowa.
+   Domyślnie jasny; ciemny wariant „Mokka" pod przełącznikiem.
+   Kontrast dobrany >= WCAG 2.2 AA.
    ============================================================ */
 
-/* ---------- Zmienne: tryb ciemny (domyślny) ---------- */
+/* ---------- Zmienne: tryb jasny „Latte" (domyślny) ---------- */
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 
-  /* Tła */
-  --bg: #14151a;          /* bardzo ciemny grafit (atrament), nie czerń */
-  --bg-elev: #1c1e26;     /* karty, wyniesione elementy */
-  --bg-elev-2: #23262f;   /* hover kart */
+  /* Tła — ciepła kremowa baza (latte/cappuccino) */
+  --bg: #f4ece0;          /* ciepłe latte / pianka */
+  --bg-elev: #fbf6ee;     /* karty, wyniesione elementy */
+  --bg-elev-2: #ece0cf;   /* hover kart */
 
-  /* Tekst */
-  --text: #ecebe6;        /* przygaszona biel na grafit ~ 14.5:1 */
-  --text-muted: #b3b2ab;  /* tekst drugorzędny ~ 8:1 */
-  --text-faint: #8b8a84;  /* metadane ~ 5:1 (AA dla dużego/UI) */
+  /* Tekst — ciepłe espresso, nie czerń */
+  --text: #2a2018;        /* espresso na kremie ~ 12:1 */
+  --text-muted: #574b3d;  /* tekst drugorzędny ~ 6.8:1 */
+  --text-faint: #6d6151;  /* metadane ~ 5:1 */
 
-  /* Akcent — ciepły bursztyn/miód */
-  --accent: #f0b429;         /* bursztyn na grafit ~ 9.7:1 */
-  --accent-strong: #f6c343;  /* jaśniejszy wariant hover */
-  --accent-ink: #14151a;     /* tekst na tle akcentu (ciemny) */
+  /* Akcent — przygaszona zieleń szałwiowa/eukaliptusowa */
+  --accent: #3d6147;         /* głęboka szałwia na kremie ~ 5.6:1 */
+  --accent-strong: #2f4d38;  /* hover, ciemniejszy ~ 8:1 */
+  --accent-ink: #fbf6ee;     /* tekst na tle akcentu (jasny) */
 
   /* Linie, obrysy */
-  --border: #2e3038;
-  --border-strong: #3a3d47;
+  --border: #ddd0bd;
+  --border-strong: #c7b8a1;
 
   /* Fokus */
-  --focus: var(--accent-strong);
+  --focus: var(--accent);
+
 
   /* Typografia */
   --font-serif: 'Fraunces', 'Georgia', 'Times New Roman', serif;
@@ -50,26 +52,26 @@
   --space-6: 6rem;
 }
 
-/* ---------- Tryb jasny ---------- */
-:root[data-theme='light'] {
-  color-scheme: light;
+/* ---------- Tryb ciemny „Mokka" (ocieplony, nie chłodny grafit) ---------- */
+:root[data-theme='dark'] {
+  color-scheme: dark;
 
-  --bg: #f7f5ef;          /* ciepła kość słoniowa */
-  --bg-elev: #ffffff;
-  --bg-elev-2: #f0ede4;
+  --bg: #201a14;          /* ciemna mokka/espresso, ciepła nie grafitowa */
+  --bg-elev: #2b241c;
+  --bg-elev-2: #362d23;
 
-  --text: #22232a;        /* prawie-czerń na kremie ~ 13:1 */
-  --text-muted: #4f5058;  /* ~ 7:1 */
-  --text-faint: #6a6b73;  /* ~ 5:1 */
+  --text: #f0e8dc;        /* ciepła kość na mokce ~ 13:1 */
+  --text-muted: #c3b7a5;  /* ~ 8:1 */
+  --text-faint: #9a8d7b;  /* ~ 5:1 */
 
-  --accent: #7d5600;         /* ciemniejszy bursztyn dla kontrastu na jasnym ~ 6.8:1 */
-  --accent-strong: #664600;  /* hover ~ 9:1 */
-  --accent-ink: #ffffff;
+  --accent: #8fb99a;         /* jaśniejsza szałwia dla kontrastu na ciemnym ~ 7.5:1 */
+  --accent-strong: #a7ccb0;  /* hover ~ 9.5:1 */
+  --accent-ink: #201a14;     /* tekst na tle akcentu (ciemny) */
 
-  --border: #ddd8cc;
-  --border-strong: #c9c3b3;
+  --border: #3d3327;
+  --border-strong: #4a3f31;
 
-  --focus: var(--accent);
+  --focus: var(--accent-strong);
 }
 
 /* ---------- Reset i podstawy ---------- */

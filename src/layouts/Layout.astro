@@ -38,20 +38,20 @@ const canonical = lang === 'pl' ? `${siteUrl}${path}` : `${siteUrl}/en${path ===
     <meta property="og:locale" content={lang === 'pl' ? 'pl_PL' : 'en_US'} />
     <meta name="twitter:card" content="summary" />
 
-    <meta name="theme-color" content="#14151a" />
+    <meta name="theme-color" content="#f4ece0" />
 
-    {/* Ustaw motyw przed renderem, żeby uniknąć mignięcia (FOUC). */}
+    {/* Ustaw motyw przed renderem, żeby uniknąć mignięcia (FOUC). Domyślny: jasny. */}
     <script is:inline>
       (function () {
         try {
           var stored = localStorage.getItem('theme');
           var theme =
             stored ||
-            (window.matchMedia('(prefers-color-scheme: light)').matches
-              ? 'light'
-              : 'dark');
-          if (theme === 'light') {
-            document.documentElement.setAttribute('data-theme', 'light');
+            (window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light');
+          if (theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
           }
         } catch (e) {}
       })();
