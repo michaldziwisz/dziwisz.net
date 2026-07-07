@@ -240,6 +240,13 @@ export const projects: Project[] = [
     tags: ['dostepnosc', 'kod'],
     links: [
       {
+        labelPl: 'Pobierz',
+        labelEn: 'Download',
+        a11yPl: 'Pobierz PDF Signature Remover z Microsoft Store',
+        a11yEn: 'Download PDF Signature Remover from the Microsoft Store',
+        href: 'https://apps.microsoft.com/detail/9n7j94w7nbmp?hl=pl-PL&gl=PL',
+      },
+      {
         labelPl: 'Kod źródłowy',
         labelEn: 'Source code',
         a11yPl: 'Kod źródłowy PDF Signature Remover',
