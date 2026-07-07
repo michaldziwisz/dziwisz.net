@@ -16,7 +16,7 @@ export const ui = {
     'site.title': 'Michał Dziwisz',
     'site.tagline': 'Dostępność cyfrowa, media i oprogramowanie',
     'site.description':
-      'Michał Dziwisz — pomysłodawca i redaktor naczelny TyfloPodcast, twórca narzędzi i aplikacji, dla których dostępność cyfrowa jest fundamentem. Praca i pasja w jednym nurcie.',
+      'Michał Dziwisz: pomysłodawca i redaktor naczelny TyfloPodcast, twórca narzędzi i aplikacji, dla których dostępność cyfrowa jest fundamentem. Praca i pasja w jednym nurcie.',
 
     'nav.home': 'Start',
     'nav.about': 'O mnie',
@@ -47,18 +47,18 @@ export const ui = {
 
     'work.heading': 'Czym się zajmuję',
     'work.intro':
-      'Nie rozdzielam pracy od pasji — to jeden organizm. Poniżej rzeczy, które tworzę, współtworzę i rozwijam.',
+      'Nie rozdzielam pracy od pasji. To jeden organizm. Poniżej rzeczy, które tworzę, współtworzę i rozwijam.',
     'work.visit': 'Otwórz',
     'work.repo': 'Kod źródłowy',
     'work.platforms': 'Platformy',
 
     'about.heading': 'O mnie',
     'about.p1':
-      'Nazywam się Michał Dziwisz. Zajmuję się tym, co wielu ludzi rozdziela na „pracę" i „pasję" — u mnie to jeden nurt. Media, technologia i dostępność cyfrowa spotykają się w jednym miejscu, bo dla mnie zawsze chodziło o to samo: żeby narzędzia, treści i usługi były naprawdę dostępne dla każdego, niezależnie od tego, czy widzi ekran.',
+      'Nazywam się Michał Dziwisz. Zajmuję się tym, co wielu ludzi rozdziela na „pracę" i „pasję". U mnie to jeden nurt. Media, technologia i dostępność cyfrowa spotykają się w jednym miejscu, bo dla mnie zawsze chodziło o to samo: żeby narzędzia, treści i usługi były naprawdę dostępne dla każdego, niezależnie od tego, czy widzi ekran.',
     'about.p2':
-      'Jestem pomysłodawcą i redaktorem naczelnym TyfloPodcast — serwisu o technologii i dostępności dla osób niewidomych i słabowidzących. Współtworzę format kanału głównego Radia DHT. Buduję też oprogramowanie: od aplikacji TyfloCentrum na Windows, Androida i iOS, przez system automatyzacji radiowej SARA, po drobne, ale praktyczne narzędzia jak Podróżnik czy program do usuwania podpisów z plików PDF.',
+      'Jestem pomysłodawcą i redaktorem naczelnym TyfloPodcast, serwisu o technologii i dostępności dla osób niewidomych i słabowidzących. Współtworzę format kanału głównego Radia DHT. Buduję też oprogramowanie: od aplikacji TyfloCentrum na Windows, Androida i iOS, przez system automatyzacji radiowej SARA, po drobne, ale praktyczne narzędzia jak Podróżnik czy program do usuwania podpisów z plików PDF.',
     'about.p3':
-      'Wspólnym mianownikiem jest dostępność. Nie traktuję jej jako dodatku dodawanego na końcu, tylko jako fundament — sposób myślenia o tym, jak w ogóle projektować i pisać kod. Ta strona jest tego przykładem: została zbudowana tak, by dobrze działała z czytnikiem ekranu, klawiaturą i w obu trybach kolorystycznych.',
+      'Wspólnym mianownikiem jest dostępność. Nie traktuję jej jako dodatku dodawanego na końcu, tylko jako fundament i sposób myślenia o tym, jak w ogóle projektować i pisać kod. Ta strona jest tego przykładem: została zbudowana tak, by dobrze działała z czytnikiem ekranu, klawiaturą i w obu trybach kolorystycznych.',
     'about.workLink': 'Zobacz, nad czym pracuję',
 
     'contact.heading': 'Kontakt',
@@ -80,7 +80,7 @@ export const ui = {
     'site.title': 'Michał Dziwisz',
     'site.tagline': 'Digital accessibility, media and software',
     'site.description':
-      'Michał Dziwisz — founder and editor-in-chief of TyfloPodcast, and maker of tools and apps built on digital accessibility. Work and passion in one stream.',
+      'Michał Dziwisz: founder and editor-in-chief of TyfloPodcast, and maker of tools and apps built on digital accessibility. Work and passion in one stream.',
 
     'nav.home': 'Home',
     'nav.about': 'About',
@@ -111,18 +111,18 @@ export const ui = {
 
     'work.heading': 'What I do',
     'work.intro':
-      "I don't separate work from passion — it's one organism. Below are the things I create, co-create and maintain.",
+      "I don't separate work from passion. It's one organism. Below are the things I create, co-create and maintain.",
     'work.visit': 'Open',
     'work.repo': 'Source code',
     'work.platforms': 'Platforms',
 
     'about.heading': 'About me',
     'about.p1':
-      "My name is Michał Dziwisz. I do the kind of work that many people split into a 'job' and a 'hobby' — for me it's a single stream. Media, technology and digital accessibility meet in one place, because it was always about the same thing for me: making sure tools, content and services are genuinely accessible to everyone, whether or not they can see the screen.",
+      "My name is Michał Dziwisz. I do the kind of work that many people split into a 'job' and a 'hobby', but for me it's a single stream. Media, technology and digital accessibility meet in one place, because it was always about the same thing for me: making sure tools, content and services are genuinely accessible to everyone, whether or not they can see the screen.",
     'about.p2':
-      "I am the founder and editor-in-chief of TyfloPodcast — a platform about technology and accessibility for blind and partially sighted people. I co-create the format of Radio DHT's main channel. I also build software: from the TyfloCentrum apps for Windows, Android and iOS, through the SARA radio automation system, to small but practical tools like Podróżnik or an app for removing signatures from PDF files.",
+      "I am the founder and editor-in-chief of TyfloPodcast, a platform about technology and accessibility for blind and partially sighted people. I co-create the format of Radio DHT's main channel. I also build software: from the TyfloCentrum apps for Windows, Android and iOS, through the SARA radio automation system, to small but practical tools like Podróżnik or an app for removing signatures from PDF files.",
     'about.p3':
-      'The common denominator is accessibility. I never treat it as an add-on bolted on at the end, but as a foundation — a way of thinking about how to design and write code in the first place. This site is an example: it was built to work well with a screen reader, a keyboard and in both colour themes.',
+      'The common denominator is accessibility. I never treat it as an add-on bolted on at the end, but as a foundation and a way of thinking about how to design and write code in the first place. This site is an example: it was built to work well with a screen reader, a keyboard and in both colour themes.',
     'about.workLink': 'See what I work on',
 
     'contact.heading': 'Contact',

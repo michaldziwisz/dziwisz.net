@@ -60,9 +60,9 @@ export const projects: Project[] = [
     namePl: 'Radio DHT',
     nameEn: 'Radio DHT',
     descPl:
-      'Internetowa stacja radiowa — kanał główny. Jestem współtwórcą formatu tego kanału.',
+      'Internetowa stacja radiowa i jej kanał główny. Jestem współtwórcą formatu tego kanału.',
     descEn:
-      'An internet radio station — the main channel. I am a co-creator of the channel format.',
+      'An internet radio station and its main channel. I am a co-creator of the channel format.',
     tags: ['media'],
     links: [
       {
@@ -80,9 +80,9 @@ export const projects: Project[] = [
     namePl: 'UTILITIA 2.0',
     nameEn: 'UTILITIA 2.0',
     descPl:
-      'Narzędzie do badania dostępności cyfrowej — analizuje strony i dokumenty pod kątem zgodności ze standardami (WCAG, PDF/UA). Wersja rozwojowa.',
+      'Narzędzie do badania dostępności cyfrowej. Analizuje strony i dokumenty pod kątem zgodności ze standardami (WCAG, PDF/UA). Wersja rozwojowa.',
     descEn:
-      'A tool for auditing digital accessibility — it analyses websites and documents against standards (WCAG, PDF/UA). Beta version.',
+      'A tool for auditing digital accessibility. It analyses websites and documents against standards (WCAG, PDF/UA). Beta version.',
     tags: ['dostepnosc', 'kod'],
     links: [
       {
@@ -100,9 +100,9 @@ export const projects: Project[] = [
     namePl: 'SARA',
     nameEn: 'SARA',
     descPl:
-      'Simple Accessible Radio Automation — dostępny system automatyzacji radiowej. Otwarte oprogramowanie napisane w Pythonie.',
+      'Simple Accessible Radio Automation, czyli dostępny system automatyzacji radiowej. Otwarte oprogramowanie napisane w Pythonie.',
     descEn:
-      'Simple Accessible Radio Automation — an accessible radio automation system. Open-source software written in Python.',
+      'Simple Accessible Radio Automation, an accessible radio automation system. Open-source software written in Python.',
     tags: ['media', 'kod', 'dostepnosc'],
     links: [
       {
@@ -120,9 +120,9 @@ export const projects: Project[] = [
     namePl: 'TyfloCentrum',
     nameEn: 'TyfloCentrum',
     descPl:
-      'Klienci TyfloPodcast na trzy platformy — Windows, Android i iOS. Interfejs projektowany pod dostępność i obsługę czytnikami ekranu (NVDA, TalkBack, VoiceOver).',
+      'Klienci TyfloPodcast na trzy platformy: Windows, Androida i iOS. Interfejs projektowany pod dostępność i obsługę czytnikami ekranu (NVDA, TalkBack, VoiceOver).',
     descEn:
-      'TyfloPodcast clients for three platforms — Windows, Android and iOS. The interface is designed for accessibility and screen readers (NVDA, TalkBack, VoiceOver).',
+      'TyfloPodcast clients for three platforms: Windows, Android and iOS. The interface is designed for accessibility and screen readers (NVDA, TalkBack, VoiceOver).',
     tags: ['media', 'kod', 'dostepnosc'],
     links: [
       {
