@@ -14,12 +14,11 @@ export interface Social {
   href: string;
 }
 
-// Profile „gdzie indziej". Usuń te, których nie chcesz; dodaj własne.
+// Profile „gdzie indziej”. Usuń te, których nie chcesz; dodaj własne.
 export const socials: Social[] = [
   { id: 'github', label: 'GitHub', href: 'https://github.com/michaldziwisz' },
-  { id: 'tyflopodcast', label: 'TyfloPodcast', href: 'https://tyflopodcast.net' },
-  // Przykłady — odkomentuj i uzupełnij, jeśli chcesz:
-  // { id: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/...' },
-  // { id: 'x', label: 'X', href: 'https://x.com/...' },
-  // { id: 'mastodon', label: 'Mastodon', href: 'https://...' },
+  { id: 'facebook', label: 'Facebook', href: 'https://www.facebook.com/michal.dziwisz' },
+  { id: 'telefon', label: 'Telefon: +48 695 918 803', href: 'tel:+48695918803' },
+  { id: 'whatsapp', label: 'WhatsApp', href: 'https://wa.me/48695918803' },
+  { id: 'telegram', label: 'Telegram: @mdziwisz', href: 'https://t.me/mdziwisz' },
 ];
