@@ -56,9 +56,9 @@ export const ui = {
     'about.p1':
       'Nazywam się Michał Dziwisz. Od lat tworzę media, aplikacje i narzędzia, które mają ułatwiać codzienne korzystanie z technologii. Jako osoba niewidoma traktuję dostępność cyfrową osobiście; to nie tylko temat, którym się zajmuję, ale coś, co realnie wpływa na życie. Staram się robić rzeczy potrzebne, zrozumiałe i dostępne dla możliwie wielu osób.',
     'about.p2':
-      'Jestem pomysłodawcą i redaktorem naczelnym TyfloPodcast, serwisu o technologii i dostępności dla osób niewidomych i słabowidzących. Współtworzę format kanału głównego Radia DHT. Buduję też oprogramowanie: od aplikacji TyfloCentrum na Windows, Androida i iOS, przez system automatyzacji radiowej SARA, po drobne, ale praktyczne narzędzia jak Podróżnik czy program do usuwania podpisów z plików PDF.',
+      'Jestem pomysłodawcą i redaktorem naczelnym serwisu TyfloPodcast, poświęconego technologii i dostępności dla osób niewidomych i słabowidzących. Współtworzę też format kanału głównego Radia DHT. Do moich projektów programistycznych należą między innymi aplikacje TyfloCentrum dla systemów Windows, Android i iOS, system automatyzacji radiowej SARA oraz mniejsze, praktyczne narzędzia, takie jak Podróżnik czy program do usuwania podpisów z plików PDF.',
     'about.p3':
-      'Wspólnym mianownikiem jest dostępność. Nie traktuję jej jako dodatku dodawanego na końcu, tylko jako fundament i sposób myślenia o tym, jak w ogóle projektować i pisać kod. Ta strona jest tego przykładem: została zbudowana tak, by dobrze działała z czytnikiem ekranu, klawiaturą i w obu trybach kolorystycznych.',
+      'Łączy je dostępność. Staram się myśleć o niej od początku, a nie dokładać jej na końcu gotowego projektu. Ta strona powstała w podobnym duchu: ma dobrze działać z czytnikiem ekranu, dawać się wygodnie obsługiwać z klawiatury i pozostawać czytelna w trybie jasnym i ciemnym.',
     'about.workLink': 'Zobacz, nad czym pracuję',
 
     'contact.heading': 'Kontakt',
@@ -120,9 +120,9 @@ export const ui = {
     'about.p1':
       "My name is Michał Dziwisz. For years, I've been creating media, apps and tools that make everyday use of technology easier. As someone who is blind, digital accessibility matters to me personally; it is not just an area I work in, but something that affects real life. I try to make things that are useful, understandable and accessible to as many people as possible.",
     'about.p2':
-      "I am the founder and editor-in-chief of TyfloPodcast, a platform about technology and accessibility for blind and partially sighted people. I co-create the format of Radio DHT's main channel. I also build software: from the TyfloCentrum apps for Windows, Android and iOS, through the SARA radio automation system, to small but practical tools like Podróżnik or an app for removing signatures from PDF files.",
+      "I am the founder and editor-in-chief of TyfloPodcast, a site about technology and accessibility for blind and partially sighted people. I also help develop the format of Radio DHT's main channel. My software projects include the TyfloCentrum apps for Windows, Android and iOS, the SARA radio automation system, and smaller practical tools such as Podróżnik and a utility for removing signatures from PDF files.",
     'about.p3':
-      'The common denominator is accessibility. I never treat it as an add-on bolted on at the end, but as a foundation and a way of thinking about how to design and write code in the first place. This site is an example: it was built to work well with a screen reader, a keyboard and in both colour themes.',
+      'Accessibility is what ties these projects together. I try to think about it from the start, rather than add it to a finished project at the end. This website was built in the same spirit: it is meant to work well with screen readers, be easy to use with a keyboard, and remain readable in both light and dark modes.',
     'about.workLink': 'See what I work on',
 
     'contact.heading': 'Contact',
