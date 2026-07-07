@@ -120,7 +120,7 @@ export const projects: Project[] = [
     namePl: 'TyfloCentrum',
     nameEn: 'TyfloCentrum',
     descPl:
-      'Klienci TyfloPodcast na trzy platformy: Windows, Androida i iOS. Interfejs projektowany pod dostępność i obsługę czytnikami ekranu (NVDA, TalkBack, VoiceOver).',
+      'Klienty TyfloPodcast na trzy platformy: Windows, Androida i iOS. Interfejs projektowany pod dostępność i obsługę czytnikami ekranu (NVDA, TalkBack, VoiceOver).',
     descEn:
       'TyfloPodcast clients for three platforms: Windows, Android and iOS. The interface is designed for accessibility and screen readers (NVDA, TalkBack, VoiceOver).',
     tags: ['media', 'kod', 'dostepnosc'],
