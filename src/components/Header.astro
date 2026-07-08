@@ -119,17 +119,17 @@ function isCurrent(href: string) {
     margin: 0;
     padding: 0;
   }
-  .site-nav a {
+  .site-nav ul a {
     color: var(--text-muted);
     text-decoration: none;
     font-weight: 500;
     padding: 0.35rem 0;
     border-bottom: 2px solid transparent;
   }
-  .site-nav a:hover {
+  .site-nav ul a:hover {
     color: var(--text);
   }
-  .site-nav a.is-current {
+  .site-nav ul a.is-current {
     color: var(--text);
     border-bottom-color: var(--accent);
   }
@@ -249,11 +249,11 @@ function isCurrent(href: string) {
     .site-nav li {
       border-bottom: 1px solid var(--border);
     }
-    .site-nav a {
+    .site-nav ul a {
       display: block;
       padding: 0.8rem 0;
     }
-    .site-nav a.is-current {
+    .site-nav ul a.is-current {
       border-bottom-color: transparent;
       color: var(--accent);
     }
