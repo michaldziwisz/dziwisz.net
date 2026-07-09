@@ -229,6 +229,26 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: 'wdesen',
+    featured: false,
+    namePl: 'W Deseń',
+    nameEn: 'W Deseń',
+    descPl:
+      'Strona pracowni rękodzieła „W Deseń” Moniki Machul. Zbudowałem ją na frameworku Astro, a do tego przygotowałem autorce wygodne narzędzie do samodzielnej publikacji zdjęć prac — dodaje je, porządkuje w kategoriach i wydaje na stronę bez znajomości kodu.',
+    descEn:
+      'A website for Monika Machul’s craft studio “W Deseń”. I built it with the Astro framework and additionally created a convenient tool that lets the author publish photos of her work herself — adding them, organising them into categories and pushing them live without touching any code.',
+    tags: ['kod'],
+    links: [
+      {
+        labelPl: 'Otwórz stronę',
+        labelEn: 'Open the site',
+        a11yPl: 'Otwórz stronę pracowni W Deseń',
+        a11yEn: 'Open the W Deseń studio website',
+        href: 'https://wdesen.eu.org',
+      },
+    ],
+  },
+  {
     id: 'pdf-signature-remover',
     featured: false,
     namePl: 'PDF Signature Remover',
