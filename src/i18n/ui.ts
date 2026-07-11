@@ -55,7 +55,7 @@ export const ui = {
     'work.platforms': 'Platformy',
 
     'about.photoAlt':
-      'Uśmiechnięty Michał Dziwisz w jasnym kaszkiecie i beżowej koszulce z nadrukiem kotów rasy ragdoll, na tle tapety z tym samym kocim wzorem; obok napis „Mam kota na punkcie kota?”.',
+      'Uśmiechnięty Michał w jasnym kaszkiecie i beżowej koszulce z nadrukiem kotów rasy ragdoll, na tle tapety z tym samym kocim wzorem; obok napis „Mam kota na punkcie kota?”.',
     'about.heading': 'O mnie',
     'about.p1':
       'Nazywam się Michał Dziwisz. Od lat tworzę media, aplikacje i narzędzia, które mają ułatwiać codzienne korzystanie z technologii. Jako osoba niewidoma traktuję dostępność cyfrową osobiście; to nie tylko temat, którym się zajmuję, ale coś, co realnie wpływa na życie. Staram się robić rzeczy potrzebne, zrozumiałe i dostępne dla możliwie wielu osób.',
@@ -123,7 +123,7 @@ export const ui = {
     'work.platforms': 'Platforms',
 
     'about.photoAlt':
-      'Smiling Michał Dziwisz in a light flat cap and a beige t-shirt printed with ragdoll cats, against wallpaper with the same cat pattern; next to it the Polish caption „Mam kota na punkcie kota?” (crazy about cats).',
+      'Smiling Michał in a light flat cap and a beige t-shirt printed with ragdoll cats, against wallpaper with the same cat pattern; next to it the Polish caption „Mam kota na punkcie kota?” (crazy about cats).',
     'about.heading': 'About me',
     'about.p1':
       "My name is Michał Dziwisz. For years, I've been creating media, apps and tools that make everyday use of technology easier. As someone who is blind, digital accessibility matters to me personally; it is not just an area I work in, but something that affects real life. I try to make things that are useful, understandable and accessible to as many people as possible.",
