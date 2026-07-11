@@ -1,5 +1,7 @@
 ---
 import { useTranslations, localizedPath, type Lang } from '../../i18n/ui';
+import { Image } from 'astro:assets';
+import portrait from '../../assets/michal-dziwisz-koty.jpg';
 
 interface Props {
   lang: Lang;
@@ -9,22 +11,66 @@ const t = useTranslations(lang);
 ---
 
 <section class="page-intro" aria-labelledby="about-heading">
-  <div class="container narrow">
-    <h1 id="about-heading">{t('about.heading')}</h1>
-    <p class="lede">{t('about.p1')}</p>
-    <p>{t('about.p2')}</p>
-    <p>{t('about.p3')}</p>
-    <p class="about-cta">
-      <a class="btn btn-primary" href={localizedPath('/czym-sie-zajmuje', lang)}>
-        {t('about.workLink')}
-      </a>
-    </p>
+  <div class="container about-inner">
+    <div class="about-text">
+      <h1 id="about-heading">{t('about.heading')}</h1>
+      <p class="lede">{t('about.p1')}</p>
+      <p>{t('about.p2')}</p>
+      <p>{t('about.p3')}</p>
+      <p class="about-cta">
+        <a class="btn btn-primary" href={localizedPath('/czym-sie-zajmuje', lang)}>
+          {t('about.workLink')}
+        </a>
+      </p>
+    </div>
+    <div class="about-photo">
+      <Image
+        src={portrait}
+        alt={t('about.photoAlt')}
+        widths={[320, 480, 640]}
+        sizes="(max-width: 52rem) 70vw, 22rem"
+        loading="eager"
+        class="about-photo-img"
+      />
+    </div>
   </div>
 </section>
 
 <style>
-  .narrow {
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(2rem, 1rem + 4vw, 3.5rem);
+    align-items: start;
+  }
+  @media (min-width: 52rem) {
+    .about-inner {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 22rem);
+    }
+  }
+  .about-text {
     max-width: 52rem;
+  }
+  .about-photo {
+    justify-self: center;
+    max-width: 20rem;
+    width: 100%;
+  }
+  @media (min-width: 52rem) {
+    .about-photo {
+      justify-self: end;
+      max-width: 22rem;
+      position: sticky;
+      top: var(--space-4);
+    }
+  }
+  .about-photo-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-strong);
+    box-shadow: var(--shadow-hover);
   }
   .about-cta {
     margin-top: var(--space-4);
