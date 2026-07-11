@@ -35,6 +35,8 @@ export const ui = {
     'lang.switch': 'Zmień język na angielski',
     'lang.label': 'Wybór języka',
 
+    'home.hero.photoAlt':
+      'Michał Dziwisz w studiu radiowym: w kaszkiecie i białej koszulce, uśmiechnięty, przy mikrofonie; w tle świecący neon ON AIR.',
     'home.hero.eyebrow': 'Cześć, nazywam się',
     'home.hero.lede':
       'Tworzę dostępne media, aplikacje i narzędzia, które mają być praktyczne i przydatne.',
@@ -99,6 +101,8 @@ export const ui = {
     'lang.switch': 'Change language to Polish',
     'lang.label': 'Language selection',
 
+    'home.hero.photoAlt':
+      'Michał Dziwisz in a radio studio: wearing a flat cap and a white t-shirt, smiling, at a microphone; a glowing ON AIR neon sign in the background.',
     'home.hero.eyebrow': 'Hi, my name is',
     'home.hero.lede':
       'I create accessible media, apps and tools that are meant to be practical and genuinely useful.',

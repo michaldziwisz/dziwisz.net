@@ -2,6 +2,8 @@
 import { useTranslations, localizedPath, type Lang } from '../../i18n/ui';
 import { projects } from '../../data/projekty';
 import ProjectCard from '../ProjectCard.astro';
+import { Image } from 'astro:assets';
+import portrait from '../../assets/michal-dziwisz-studio.jpg';
 
 interface Props {
   lang: Lang;
@@ -12,18 +14,30 @@ const featured = projects.filter((p) => p.featured);
 ---
 
 <section class="hero" aria-labelledby="hero-name">
-  <div class="container">
-    <p class="eyebrow">{t('home.hero.eyebrow')}</p>
-    <h1 id="hero-name">Michał Dziwisz</h1>
-    <p class="hero-tagline">{t('site.tagline')}</p>
-    <p class="lede hero-lede">{t('home.hero.lede')}</p>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href={localizedPath('/czym-sie-zajmuje', lang)}>
-        {t('home.cta.work')}
-      </a>
-      <a class="btn btn-ghost" href={localizedPath('/kontakt', lang)}>
-        {t('home.cta.contact')}
-      </a>
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow">{t('home.hero.eyebrow')}</p>
+      <h1 id="hero-name">Michał Dziwisz</h1>
+      <p class="hero-tagline">{t('site.tagline')}</p>
+      <p class="lede hero-lede">{t('home.hero.lede')}</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href={localizedPath('/czym-sie-zajmuje', lang)}>
+          {t('home.cta.work')}
+        </a>
+        <a class="btn btn-ghost" href={localizedPath('/kontakt', lang)}>
+          {t('home.cta.contact')}
+        </a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <Image
+        src={portrait}
+        alt={t('home.hero.photoAlt')}
+        widths={[320, 480, 640]}
+        sizes="(max-width: 52rem) 60vw, 24rem"
+        loading="eager"
+        class="hero-photo-img"
+      />
     </div>
   </div>
 </section>
@@ -63,6 +77,36 @@ const featured = projects.filter((p) => p.featured);
 <style>
   .hero {
     padding-block: clamp(3.5rem, 2rem + 9vw, 8rem) var(--space-5);
+  }
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(2rem, 1rem + 4vw, 4rem);
+    align-items: center;
+  }
+  @media (min-width: 52rem) {
+    .hero-inner {
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    }
+  }
+  .hero-photo {
+    justify-self: center;
+    max-width: 20rem;
+    width: 100%;
+  }
+  @media (min-width: 52rem) {
+    .hero-photo {
+      justify-self: end;
+      max-width: 24rem;
+    }
+  }
+  .hero-photo-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-strong);
+    box-shadow: var(--shadow-hover);
   }
   .hero-tagline {
     font-family: var(--font-serif);
