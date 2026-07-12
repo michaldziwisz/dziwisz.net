@@ -14,9 +14,9 @@ export const defaultLang: Lang = 'pl';
 export const ui = {
   pl: {
     'site.title': 'Michał Dziwisz',
-    'site.tagline': 'Dostępność cyfrowa, media i oprogramowanie',
+    'site.tagline': 'Dostępność cyfrowa, media i oprogramowanie',
     'site.description':
-      'Strona Michała Dziwisza o dostępności cyfrowej, mediach, technologii i narzędziach tworzonych z myślą o ludziach.',
+      'Strona Michała Dziwisza o dostępności cyfrowej, mediach, technologii i narzędziach tworzonych z myślą o ludziach.',
 
     'nav.home': 'Start',
     'nav.about': 'O mnie',
@@ -36,43 +36,43 @@ export const ui = {
     'lang.label': 'Wybór języka',
 
     'home.hero.photoAlt':
-      'Michał Dziwisz w studiu radiowym: w kaszkiecie i białej koszulce, uśmiechnięty, przy mikrofonie; w tle świecący neon ON AIR.',
+      'Michał Dziwisz w studiu radiowym: w kaszkiecie i białej koszulce, uśmiechnięty, przy mikrofonie; w tle świecący neon ON AIR.',
     'home.hero.eyebrow': 'Cześć, nazywam się',
     'home.hero.lede':
-      'Tworzę dostępne media, aplikacje i narzędzia, które mają być praktyczne i przydatne.',
+      'Tworzę dostępne media, aplikacje i narzędzia, które mają być praktyczne i przydatne.',
     'home.cta.work': 'Zobacz, czym się zajmuję',
     'home.cta.contact': 'Napisz do mnie',
     'home.work.heading': 'Wybrane rzeczy, które tworzę',
     'home.work.all': 'Zobacz wszystko',
-    'home.about.heading': 'Kilka słów o mnie',
-    'home.about.more': 'Więcej o mnie',
+    'home.about.heading': 'Kilka słów o mnie',
+    'home.about.more': 'Więcej o mnie',
 
     'work.heading': 'Czym się zajmuję',
     'work.intro':
-      'Nie rozdzielam pracy od pasji. To jeden organizm. Poniżej rzeczy, które tworzę, współtworzę i rozwijam.',
+      'Nie rozdzielam pracy od pasji. To jeden organizm. Poniżej rzeczy, które tworzę, współtworzę i rozwijam.',
     'work.visit': 'Otwórz',
     'work.repo': 'Kod źródłowy',
     'work.platforms': 'Platformy',
 
     'about.photoAlt':
-      'Uśmiechnięty Michał w jasnym kaszkiecie i beżowej koszulce z nadrukiem kotów rasy ragdoll, na tle tapety z tym samym kocim wzorem; obok napis „Mam kota na punkcie kota?”.',
+      'Uśmiechnięty Michał w jasnym kaszkiecie i beżowej koszulce z nadrukiem kotów rasy ragdoll, na tle tapety z tym samym kocim wzorem; obok napis „Mam kota na punkcie kota?”.',
     'about.heading': 'O mnie',
     'about.p1':
-      'Nazywam się Michał Dziwisz. Od lat tworzę media, aplikacje i narzędzia, które mają ułatwiać codzienne korzystanie z technologii. Jako osoba niewidoma traktuję dostępność cyfrową osobiście; to nie tylko temat, którym się zajmuję, ale coś, co realnie wpływa na życie. Staram się robić rzeczy potrzebne, zrozumiałe i dostępne dla możliwie wielu osób.',
+      'Nazywam się Michał Dziwisz. Od lat tworzę media, aplikacje i narzędzia, które mają ułatwiać codzienne korzystanie z technologii. Jako osoba niewidoma traktuję dostępność cyfrową osobiście; to nie tylko temat, którym się zajmuję, ale coś, co realnie wpływa na życie. Staram się robić rzeczy potrzebne, zrozumiałe i dostępne dla możliwie wielu osób.',
     'about.p2':
-      'Jestem pomysłodawcą i redaktorem naczelnym serwisu TyfloPodcast, poświęconego technologii i dostępności dla osób niewidomych i słabowidzących. Współtworzę też format kanału głównego Radia DHT. Do moich projektów programistycznych należą między innymi aplikacje TyfloCentrum dla systemów Windows, Android i iOS, system automatyzacji radiowej SARA oraz mniejsze, praktyczne narzędzia, takie jak Podróżnik czy program do usuwania podpisów z plików PDF.',
+      'Jestem pomysłodawcą i redaktorem naczelnym serwisu TyfloPodcast, poświęconego technologii i dostępności dla osób niewidomych i słabowidzących. Współtworzę też format kanału głównego Radia DHT. Do moich projektów programistycznych należą między innymi aplikacje TyfloCentrum dla systemów Windows, Android i iOS, system automatyzacji radiowej SARA oraz mniejsze, praktyczne narzędzia, takie jak Podróżnik czy program do usuwania podpisów z plików PDF.',
     'about.p3':
-      'Łączy je dostępność. Staram się myśleć o niej od początku, a nie dokładać jej na końcu gotowego projektu. Ta strona powstała w podobnym duchu: ma dobrze działać z czytnikiem ekranu, dawać się wygodnie obsługiwać z klawiatury i pozostawać czytelna w trybie jasnym i ciemnym.',
+      'Łączy je dostępność. Staram się myśleć o niej od początku, a nie dokładać jej na końcu gotowego projektu. Ta strona powstała w podobnym duchu: ma dobrze działać z czytnikiem ekranu, dawać się wygodnie obsługiwać z klawiatury i pozostawać czytelna w trybie jasnym i ciemnym.',
     'about.workLink': 'Zobacz, nad czym pracuję',
 
     'contact.heading': 'Kontakt',
     'contact.intro':
-      'Najprościej złapać mnie mailowo lub przez profile poniżej. Chętnie porozmawiam o dostępności, mediach i technologii.',
+      'Najprościej złapać mnie mailowo lub przez profile poniżej. Chętnie porozmawiam o dostępności, mediach i technologii.',
     'contact.email': 'E-mail',
     'contact.elsewhere': 'Gdzie indziej',
 
     'footer.built':
-      'Strona zbudowana z myślą o dostępności. Kod źródłowy jest publiczny.',
+      'Strona zbudowana z myślą o dostępności. Kod źródłowy jest publiczny.',
     'footer.source': 'Kod źródłowy strony',
     'footer.rights': 'Wszelkie prawa zastrzeżone.',
 

@@ -40,7 +40,7 @@ export const projects: Project[] = [
     namePl: 'TyfloPodcast',
     nameEn: 'TyfloPodcast',
     descPl:
-      'Serwis podcastowy o technologii i dostępności dla osób niewidomych i słabowidzących. Jestem jego pomysłodawcą i redaktorem naczelnym.',
+      'Serwis podcastowy o technologii i dostępności dla osób niewidomych i słabowidzących. Jestem jego pomysłodawcą i redaktorem naczelnym.',
     descEn:
       'A podcast platform about technology and accessibility for blind and partially sighted people. I am its founder and editor-in-chief.',
     tags: ['media', 'dostepnosc'],
@@ -60,7 +60,7 @@ export const projects: Project[] = [
     namePl: 'Radio DHT',
     nameEn: 'Radio DHT',
     descPl:
-      'Internetowa stacja radiowa i jej kanał główny. Jestem współtwórcą formatu tego kanału.',
+      'Internetowa stacja radiowa i jej kanał główny. Jestem współtwórcą formatu tego kanału.',
     descEn:
       'An internet radio station and its main channel. I am a co-creator of the channel format.',
     tags: ['media'],
@@ -80,7 +80,7 @@ export const projects: Project[] = [
     namePl: 'UTILITIA 2.0',
     nameEn: 'UTILITIA 2.0',
     descPl:
-      'Narzędzie do badania dostępności cyfrowej. Analizuje strony i dokumenty pod kątem zgodności ze standardami (WCAG, PDF/UA). Wersja rozwojowa.',
+      'Narzędzie do badania dostępności cyfrowej. Analizuje strony i dokumenty pod kątem zgodności ze standardami (WCAG, PDF/UA). Wersja rozwojowa.',
     descEn:
       'A tool for auditing digital accessibility. It analyses websites and documents against standards (WCAG, PDF/UA). Beta version.',
     tags: ['dostepnosc', 'kod'],
@@ -100,7 +100,7 @@ export const projects: Project[] = [
     namePl: 'SARA',
     nameEn: 'SARA',
     descPl:
-      'Simple Accessible Radio Automation, czyli dostępny system automatyzacji radiowej. Otwarte oprogramowanie napisane w Pythonie.',
+      'Simple Accessible Radio Automation, czyli dostępny system automatyzacji radiowej. Otwarte oprogramowanie napisane w Pythonie.',
     descEn:
       'Simple Accessible Radio Automation, an accessible radio automation system. Open-source software written in Python.',
     tags: ['media', 'kod', 'dostepnosc'],
@@ -120,7 +120,7 @@ export const projects: Project[] = [
     namePl: 'TyfloCentrum',
     nameEn: 'TyfloCentrum',
     descPl:
-      'Klienty TyfloPodcast na trzy platformy: Windows, Androida i iOS. Interfejs projektowany pod dostępność i obsługę czytnikami ekranu (NVDA, TalkBack, VoiceOver).',
+      'Klienty TyfloPodcast na trzy platformy: Windows, Androida i iOS. Interfejs projektowany pod dostępność i obsługę czytnikami ekranu (NVDA, TalkBack, VoiceOver).',
     descEn:
       'TyfloPodcast clients for three platforms: Windows, Android and iOS. The interface is designed for accessibility and screen readers (NVDA, TalkBack, VoiceOver).',
     tags: ['media', 'kod', 'dostepnosc'],
@@ -128,14 +128,14 @@ export const projects: Project[] = [
       {
         labelPl: 'Windows',
         labelEn: 'Windows',
-        a11yPl: 'Pobierz TyfloCentrum na Windows z Microsoft Store',
+        a11yPl: 'Pobierz TyfloCentrum na Windows z Microsoft Store',
         a11yEn: 'Get TyfloCentrum for Windows from the Microsoft Store',
         href: 'https://apps.microsoft.com/detail/9n62mnlnn9j6?hl=pl-PL&gl=PL',
       },
       {
         labelPl: 'Android',
         labelEn: 'Android',
-        a11yPl: 'Pobierz TyfloCentrum na Androida z Google Play',
+        a11yPl: 'Pobierz TyfloCentrum na Androida z Google Play',
         a11yEn: 'Get TyfloCentrum for Android from Google Play',
         href: 'https://play.google.com/store/apps/details?id=net.tyflopodcast.tyflocentrum',
       },
@@ -154,7 +154,7 @@ export const projects: Project[] = [
     namePl: 'Podróżnik',
     nameEn: 'Podróżnik',
     descPl:
-      'Dostępny frontend do e-podroznik.pl: wyszukiwarka połączeń i rozkład odjazdów z przystanku, przyjazna czytnikom ekranu.',
+      'Dostępny frontend do e-podroznik.pl: wyszukiwarka połączeń i rozkład odjazdów z przystanku, przyjazna czytnikom ekranu.',
     descEn:
       'An accessible frontend for e-podroznik.pl: a connection search and stop timetable, friendly to screen readers.',
     tags: ['dostepnosc', 'kod'],
@@ -174,7 +174,7 @@ export const projects: Project[] = [
     namePl: 'Programista',
     nameEn: 'Programista',
     descPl:
-      'Program do wyświetlania ramówek stacji telewizyjnych i radiowych, przyjazny osobom korzystającym z czytników ekranu.',
+      'Program do wyświetlania ramówek stacji telewizyjnych i radiowych, przyjazny osobom korzystającym z czytników ekranu.',
     descEn:
       'An app for viewing TV and radio programme schedules, friendly to screen reader users.',
     tags: ['media', 'kod'],
@@ -194,7 +194,7 @@ export const projects: Project[] = [
     namePl: 'SHAQ GUI',
     nameEn: 'SHAQ GUI',
     descPl:
-      'Zestaw dostępnych aplikacji GUI dla Windows do rozpoznawania muzyki (Shazam): z pliku, z wejścia lub wyjścia audio oraz aktualizacja „teraz gra” w strumieniu Shoutcast i Icecast.',
+      'Zestaw dostępnych aplikacji GUI dla Windows do rozpoznawania muzyki (Shazam): z pliku, z wejścia lub wyjścia audio oraz aktualizacja „teraz gra” w strumieniu Shoutcast i Icecast.',
     descEn:
       'A set of accessible Windows GUI apps for music recognition (Shazam): from a file, from audio input or output, and updating “now playing” on Shoutcast and Icecast streams.',
     tags: ['media', 'kod', 'dostepnosc'],
@@ -231,10 +231,10 @@ export const projects: Project[] = [
   {
     id: 'wdesen',
     featured: false,
-    namePl: 'W Deseń',
+    namePl: 'W Deseń',
     nameEn: 'W Deseń',
     descPl:
-      'Strona pracowni rękodzieła „W Deseń” Moniki Machul. Zbudowałem ją na frameworku Astro, a do tego przygotowałem autorce wygodne narzędzie do samodzielnej publikacji zdjęć prac — dodaje je, porządkuje w kategoriach i wydaje na stronę bez znajomości kodu.',
+      'Strona pracowni rękodzieła „W Deseń” Moniki Machul. Zbudowałem ją na frameworku Astro, a do tego przygotowałem autorce wygodne narzędzie do samodzielnej publikacji zdjęć prac — dodaje je, porządkuje w kategoriach i wydaje na stronę bez znajomości kodu.',
     descEn:
       'A website for Monika Machul’s craft studio “W Deseń”. I built it with the Astro framework and additionally created a convenient tool that lets the author publish photos of her work herself — adding them, organising them into categories and pushing them live without touching any code.',
     tags: ['kod'],
@@ -242,7 +242,7 @@ export const projects: Project[] = [
       {
         labelPl: 'Otwórz stronę',
         labelEn: 'Open the site',
-        a11yPl: 'Otwórz stronę pracowni W Deseń',
+        a11yPl: 'Otwórz stronę pracowni W Deseń',
         a11yEn: 'Open the W Deseń studio website',
         href: 'https://wdesen.eu.org',
       },
@@ -254,7 +254,7 @@ export const projects: Project[] = [
     namePl: 'PDF Signature Remover',
     nameEn: 'PDF Signature Remover',
     descPl:
-      'Prosty, dostępny (NVDA/JAWS) program dla Windows do usuwania wszystkich podpisów cyfrowych z plików PDF.',
+      'Prosty, dostępny (NVDA/JAWS) program dla Windows do usuwania wszystkich podpisów cyfrowych z plików PDF.',
     descEn:
       'A simple, accessible (NVDA/JAWS) Windows app for removing all digital signatures from PDF files.',
     tags: ['dostepnosc', 'kod'],
@@ -262,7 +262,7 @@ export const projects: Project[] = [
       {
         labelPl: 'Pobierz',
         labelEn: 'Download',
-        a11yPl: 'Pobierz PDF Signature Remover z Microsoft Store',
+        a11yPl: 'Pobierz PDF Signature Remover z Microsoft Store',
         a11yEn: 'Download PDF Signature Remover from the Microsoft Store',
         href: 'https://apps.microsoft.com/detail/9n7j94w7nbmp?hl=pl-PL&gl=PL',
       },

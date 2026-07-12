@@ -18,7 +18,7 @@ export interface Social {
 export const socials: Social[] = [
   { id: 'github', label: 'GitHub', href: 'https://github.com/michaldziwisz' },
   { id: 'facebook', label: 'Facebook', href: 'https://www.facebook.com/michal.dziwisz' },
-  { id: 'telefon', label: 'Telefon: +48 695 918 803', href: 'tel:+48695918803' },
+  { id: 'telefon', label: 'Telefon: +48 695 918 803', href: 'tel:+48695918803' },
   { id: 'whatsapp', label: 'WhatsApp', href: 'https://wa.me/48695918803' },
   { id: 'telegram', label: 'Telegram: @mdziwisz', href: 'https://t.me/mdziwisz' },
 ];
