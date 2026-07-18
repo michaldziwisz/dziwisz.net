@@ -249,6 +249,26 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: 'apollo',
+    featured: false,
+    namePl: 'Apollo',
+    nameEn: 'Apollo',
+    descPl:
+      'Sterownik NVDA dla sprzętowych syntezatorów mowy Dolphin: Apollo 2, PC 2 Card i Juno. Pozwala używać tych syntezatorów jako głosu czytnika ekranu NVDA. Dostarczany jako dodatek NVDA.',
+    descEn:
+      'An NVDA driver for Dolphin hardware speech synthesizers: Apollo 2, PC 2 Card and Juno. It lets you use these synthesizers as the voice of the NVDA screen reader. Distributed as an NVDA add-on.',
+    tags: ['dostepnosc', 'kod'],
+    links: [
+      {
+        labelPl: 'Pobierz dodatek',
+        labelEn: 'Download the add-on',
+        a11yPl: 'Pobierz najnowszy dodatek NVDA Apollo',
+        a11yEn: 'Download the latest Apollo NVDA add-on',
+        href: 'https://github.com/michaldziwisz/apollo/releases/latest',
+      },
+    ],
+  },
+  {
     id: 'pdf-signature-remover',
     featured: false,
     namePl: 'PDF Signature Remover',
