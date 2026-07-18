@@ -282,9 +282,36 @@ export const projects: Project[] = [
       {
         labelPl: 'Pobierz',
         labelEn: 'Download',
-        a11yPl: 'Pobierz PDF Signature Remover z Microsoft Store',
+        a11yPl: 'Pobierz PDF Signature Remover z Microsoft Store',
         a11yEn: 'Download PDF Signature Remover from the Microsoft Store',
         href: 'https://apps.microsoft.com/detail/9n7j94w7nbmp?hl=pl-PL&gl=PL',
+      },
+    ],
+  },
+  {
+    id: 'czysciciel',
+    featured: true,
+    namePl: 'Czyściciel',
+    nameEn: 'Czyściciel',
+    descPl:
+      'Program dla Windows, który automatycznie usuwa z nagrań mowy wtrącenia typu „yyy”, „eee” i skraca zbyt długie pauzy. Wykrywa je modelem sztucznej inteligencji, brzmi naturalnie i jest w pełni dostępny dla czytników ekranu. Potrafi też wyeksportować gotowy projekt do programu Reaper.',
+    descEn:
+      'A Windows app that automatically removes filler sounds like “um” and “uh” from speech recordings and shortens overly long pauses. It detects them with an AI model, sounds natural, and is fully accessible to screen readers. It can also export a ready-made Reaper project.',
+    tags: ['kod', 'dostepnosc', 'media'],
+    links: [
+      {
+        labelPl: 'Pobierz',
+        labelEn: 'Download',
+        a11yPl: 'Pobierz Czyściciela dla Windows',
+        a11yEn: 'Download Czyściciel for Windows',
+        href: 'https://github.com/michaldziwisz/czysciciel/releases/latest/download/Czysciciel-windows.zip',
+      },
+      {
+        labelPl: 'Kod źródłowy',
+        labelEn: 'Source code',
+        a11yPl: 'Kod źródłowy Czyściciela na GitHubie',
+        a11yEn: 'Source code of Czyściciel on GitHub',
+        href: 'https://github.com/michaldziwisz/czysciciel',
       },
     ],
   },
