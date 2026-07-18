@@ -254,9 +254,9 @@ export const projects: Project[] = [
     namePl: 'Apollo',
     nameEn: 'Apollo',
     descPl:
-      'Sterownik NVDA dla sprzętowych syntezatorów mowy Dolphin: Apollo 2, PC 2 Card i Juno. Pozwala używać tych syntezatorów jako głosu czytnika ekranu NVDA. Dostarczany jako dodatek NVDA.',
+      'Sterownik NVDA dla sprzętowych syntezatorów mowy Dolphin Apollo 2 (oraz Juno). Pozwala używać tych syntezatorów jako głosu czytnika ekranu NVDA. Dostarczany jako dodatek NVDA.',
     descEn:
-      'An NVDA driver for Dolphin hardware speech synthesizers: Apollo 2, PC 2 Card and Juno. It lets you use these synthesizers as the voice of the NVDA screen reader. Distributed as an NVDA add-on.',
+      'An NVDA driver for the Dolphin Apollo 2 hardware speech synthesizer (and Juno). It lets you use these synthesizers as the voice of the NVDA screen reader. Distributed as an NVDA add-on.',
     tags: ['dostepnosc', 'kod'],
     links: [
       {
