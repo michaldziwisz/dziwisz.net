@@ -294,9 +294,9 @@ export const projects: Project[] = [
     namePl: 'Czyściciel',
     nameEn: 'Czyściciel',
     descPl:
-      'Program dla Windows, który automatycznie usuwa z nagrań mowy wtrącenia typu „yyy”, „eee” i skraca zbyt długie pauzy. Wykrywa je modelem sztucznej inteligencji, brzmi naturalnie i jest w pełni dostępny dla czytników ekranu. Potrafi też wyeksportować gotowy projekt do programu Reaper.',
+      'Program dla Windows, który automatycznie usuwa z nagrań mowy wtrącenia typu „yyy”, „eee” i skraca zbyt długie pauzy. Wykrywa je lokalnie, na komputerze użytkownika, modelem sztucznej inteligencji classla/wav2vecbert2-filledPause (nic nie jest wysyłane do sieci). Brzmi naturalnie, jest w pełni dostępny dla czytników ekranu i potrafi wyeksportować gotowy projekt do programu Reaper.',
     descEn:
-      'A Windows app that automatically removes filler sounds like “um” and “uh” from speech recordings and shortens overly long pauses. It detects them with an AI model, sounds natural, and is fully accessible to screen readers. It can also export a ready-made Reaper project.',
+      'A Windows app that automatically removes filler sounds like “um” and “uh” from speech recordings and shortens overly long pauses. It detects them locally, on the user’s own computer, with the classla/wav2vecbert2-filledPause AI model (nothing is sent to the cloud). It sounds natural, is fully accessible to screen readers, and can export a ready-made Reaper project.',
     tags: ['kod', 'dostepnosc', 'media'],
     links: [
       {
