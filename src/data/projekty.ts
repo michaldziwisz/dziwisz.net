@@ -315,6 +315,33 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    id: 'franken-fdk-aac',
+    featured: false,
+    namePl: 'Franken FDK AAC',
+    nameEn: 'Franken FDK AAC',
+    descPl:
+      'Laboratoryjny koder dźwięku AAC dla zaawansowanych. Bierze bibliotekę Fraunhofera (libfdk-aac) i wystawia na przełączniki wiersza poleceń jej wewnętrzne decyzje, które normalnie są zaszyte na sztywno: sterowanie joint stereo pasmo po paśmie, gęstość SBR, parametric stereo, kształtowanie szumu, odcięcie pasma rdzenia i wiele innych. Narzędzie do eksperymentów i podglądania, co koder robi sam z siebie. Binarki dla Windowsa buduje na żądanie GitHub, nie ja.',
+    descEn:
+      'A laboratory AAC audio encoder for power users. It takes the Fraunhofer library (libfdk-aac) and exposes its normally hardcoded internal decisions as command-line switches: per-band joint stereo control, SBR density, parametric stereo, noise shaping, core bandwidth cutoff and much more. A tool for experimenting with and inspecting what the encoder does on its own. The Windows binaries are built on demand by GitHub, not by me.',
+    tags: ['kod', 'media'],
+    links: [
+      {
+        labelPl: 'Pobierz',
+        labelEn: 'Download',
+        a11yPl: 'Pobierz Franken FDK AAC z wydań na GitHubie',
+        a11yEn: 'Download Franken FDK AAC from the GitHub releases',
+        href: 'https://github.com/michaldziwisz/franken-fdk-aac/releases/latest',
+      },
+      {
+        labelPl: 'Kod źródłowy',
+        labelEn: 'Source code',
+        a11yPl: 'Kod źródłowy Franken FDK AAC na GitHubie',
+        a11yEn: 'Source code of Franken FDK AAC on GitHub',
+        href: 'https://github.com/michaldziwisz/franken-fdk-aac',
+      },
+    ],
+  },
 ];
 
 export function projectName(p: Project, lang: Lang): string {
