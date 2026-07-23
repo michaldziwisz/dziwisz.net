@@ -321,9 +321,9 @@ export const projects: Project[] = [
     namePl: 'Franken FDK AAC',
     nameEn: 'Franken FDK AAC',
     descPl:
-      'Laboratoryjny koder dźwięku AAC dla zaawansowanych. Bierze bibliotekę Fraunhofera (libfdk-aac) i wystawia na przełączniki wiersza poleceń jej wewnętrzne decyzje, które normalnie są zaszyte na sztywno: sterowanie joint stereo pasmo po paśmie, gęstość SBR, parametric stereo, kształtowanie szumu, odcięcie pasma rdzenia i wiele innych. Narzędzie do eksperymentów i podglądania, co koder robi sam z siebie. Binarki dla Windowsa buduje na żądanie GitHub, nie ja.',
+      'Laboratoryjny koder dźwięku AAC dla zaawansowanych. Bierze bibliotekę Fraunhofera (libfdk-aac) i wystawia na przełączniki wiersza poleceń jej wewnętrzne decyzje, które normalnie są zaszyte na sztywno: sterowanie joint stereo pasmo po paśmie, gęstość SBR, parametric stereo, kształtowanie szumu, odcięcie pasma rdzenia i wiele innych. Narzędzie do eksperymentów i podglądania, co koder robi sam z siebie. Konsultacja merytoryczna: Patryk Faliszewski.',
     descEn:
-      'A laboratory AAC audio encoder for power users. It takes the Fraunhofer library (libfdk-aac) and exposes its normally hardcoded internal decisions as command-line switches: per-band joint stereo control, SBR density, parametric stereo, noise shaping, core bandwidth cutoff and much more. A tool for experimenting with and inspecting what the encoder does on its own. The Windows binaries are built on demand by GitHub, not by me.',
+      'A laboratory AAC audio encoder for power users. It takes the Fraunhofer library (libfdk-aac) and exposes its normally hardcoded internal decisions as command-line switches: per-band joint stereo control, SBR density, parametric stereo, noise shaping, core bandwidth cutoff and much more. A tool for experimenting with and inspecting what the encoder does on its own. Subject-matter consultation: Patryk Faliszewski.',
     tags: ['kod', 'media'],
     links: [
       {
