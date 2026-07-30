@@ -342,6 +342,33 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    id: 'bookamp',
+    featured: true,
+    namePl: 'Bookamp',
+    nameEn: 'Bookamp',
+    descPl:
+      'Wtyczka DSP do Winampa pomyślana pod słuchanie audiobooków, podcastów i nagrań mowy. Płynnie zmienia tempo bez zmiany wysokości głosu, wysokość bez zmiany tempa oraz tryb „kasety”, który rusza jedno i drugie naraz. Ma dwa silniki rozciągania czasu, opcjonalne wyrównywanie głośności i poprawę czytelności mowy, a do tego skróty klawiszowe działające w każdym oknie Winampa. Interfejs jest dwujęzyczny i w pełni dostępny dla czytników ekranu. Konsultacja merytoryczna: Patryk Faliszewski.',
+    descEn:
+      'A Winamp DSP plugin built for listening to audiobooks, podcasts and spoken-word recordings. It smoothly changes tempo without changing pitch, pitch without changing tempo, and a „tape” mode that moves both at once. It has two time-stretch engines, optional loudness leveling and speech intelligibility enhancement, plus keyboard shortcuts that work in any Winamp window. The interface is bilingual and fully accessible to screen readers. Subject-matter consultation: Patryk Faliszewski.',
+    tags: ['kod', 'dostepnosc', 'media'],
+    links: [
+      {
+        labelPl: 'Pobierz',
+        labelEn: 'Download',
+        a11yPl: 'Pobierz Bookampa z wydań na GitHubie',
+        a11yEn: 'Download Bookamp from the GitHub releases',
+        href: 'https://github.com/michaldziwisz/bookamp/releases/latest',
+      },
+      {
+        labelPl: 'Kod źródłowy',
+        labelEn: 'Source code',
+        a11yPl: 'Kod źródłowy Bookampa na GitHubie',
+        a11yEn: 'Source code of Bookamp on GitHub',
+        href: 'https://github.com/michaldziwisz/bookamp',
+      },
+    ],
+  },
 ];
 
 export function projectName(p: Project, lang: Lang): string {
