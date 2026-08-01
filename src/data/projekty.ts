@@ -383,6 +383,33 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    id: 'qat',
+    featured: false,
+    namePl: 'QAT',
+    nameEn: 'QAT',
+    descPl:
+      'QAT (Quality Audio Tester) to minimalistyczna wtyczka DSP do Winampa, bez okna i bez ustawień, obsługiwana dwoma klawiszami. Służy głównie do sprawdzania kompatybilności mono nagrania: klawisz Q przełącza tryb stereo, sumę mono i sam sygnał różnicowy, a klawisz W włącza poprawę czytelności mowy. Celowo nie wydaje żadnych własnych dźwięków, żeby nic nie odwracało uwagi od słuchania. Konsultacja merytoryczna: Patryk Faliszewski.',
+    descEn:
+      'QAT (Quality Audio Tester) is a minimalist DSP plugin for Winamp, with no window and no settings, controlled with two keys. It is meant mainly for checking the mono compatibility of a recording: the Q key switches between stereo, the mono sum and the difference signal, and the W key toggles speech clarity. It deliberately makes no sounds of its own, so nothing distracts you from listening. Subject-matter consultation: Patryk Faliszewski.',
+    tags: ['kod', 'dostepnosc', 'media'],
+    links: [
+      {
+        labelPl: 'Pobierz',
+        labelEn: 'Download',
+        a11yPl: 'Pobierz QAT z wydań na GitHubie',
+        a11yEn: 'Download QAT from the GitHub releases',
+        href: 'https://github.com/michaldziwisz/qat-winamp/releases/latest',
+      },
+      {
+        labelPl: 'Kod źródłowy',
+        labelEn: 'Source code',
+        a11yPl: 'Kod źródłowy QAT na GitHubie',
+        a11yEn: 'Source code of QAT on GitHub',
+        href: 'https://github.com/michaldziwisz/qat-winamp',
+      },
+    ],
+  },
 ];
 
 export function projectName(p: Project, lang: Lang): string {
