@@ -24,6 +24,10 @@ function isCurrent(href: string) {
 ---
 
 <header class="site-header">
+  {/* Skip-link należy do landmarka (WCAG 1.3.1, ace_aria_content_in_landmark),
+      a jednocześnie musi być PIERWSZYM elementem fokusowalnym strony. Nagłówek
+      jest pierwszym landmarkiem w <body>, więc oba warunki spełnia naraz. */}
+  <a class="skip-link" href="#main">{t('skip.link')}</a>
   <div class="container header-inner">
     <a class="brand" href={localizedPath('/', lang)}>Michał&nbsp;Dziwisz</a>
 
