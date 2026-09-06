@@ -128,22 +128,22 @@ export const projects: Project[] = [
       {
         labelPl: 'Windows',
         labelEn: 'Windows',
-        a11yPl: 'Pobierz TyfloCentrum na Windows z Microsoft Store',
-        a11yEn: 'Get TyfloCentrum for Windows from the Microsoft Store',
+        a11yPl: 'Windows: pobierz TyfloCentrum z Microsoft Store',
+        a11yEn: 'Windows: get TyfloCentrum from the Microsoft Store',
         href: 'https://apps.microsoft.com/detail/9n62mnlnn9j6?hl=pl-PL&gl=PL',
       },
       {
         labelPl: 'Android',
         labelEn: 'Android',
-        a11yPl: 'Pobierz TyfloCentrum na Androida z Google Play',
-        a11yEn: 'Get TyfloCentrum for Android from Google Play',
+        a11yPl: 'Android: pobierz TyfloCentrum z Google Play',
+        a11yEn: 'Android: get TyfloCentrum from Google Play',
         href: 'https://play.google.com/store/apps/details?id=net.tyflopodcast.tyflocentrum',
       },
       {
         labelPl: 'iOS',
         labelEn: 'iOS',
-        a11yPl: 'Pobierz TyfloCentrum na iOS przez TestFlight',
-        a11yEn: 'Get TyfloCentrum for iOS via TestFlight',
+        a11yPl: 'iOS: pobierz TyfloCentrum przez TestFlight',
+        a11yEn: 'iOS: get TyfloCentrum via TestFlight',
         href: 'https://testflight.apple.com/join/F8vtxp8v',
       },
     ],
@@ -234,16 +234,16 @@ export const projects: Project[] = [
     namePl: 'W Deseń',
     nameEn: 'W Deseń',
     descPl:
-      'Strona pracowni rękodzieła „W Deseń” Moniki Machul. Zbudowałem ją na frameworku Astro, a do tego przygotowałem autorce wygodne narzędzie do samodzielnej publikacji zdjęć prac — dodaje je, porządkuje w kategoriach i wydaje na stronę bez znajomości kodu.',
+      'Strona pracowni rękodzieła „W Deseń” Moniki Machul. Zbudowałem ją na frameworku Astro, a do tego przygotowałem autorce wygodne narzędzie do samodzielnej publikacji zdjęć prac: dodaje je, porządkuje w kategoriach i wydaje na stronę bez znajomości kodu.',
     descEn:
-      'A website for Monika Machul’s craft studio “W Deseń”. I built it with the Astro framework and additionally created a convenient tool that lets the author publish photos of her work herself — adding them, organising them into categories and pushing them live without touching any code.',
+      'A website for Monika Machul’s craft studio “W Deseń”. I built it with the Astro framework and additionally created a convenient tool that lets the author publish photos of her work herself: adding them, organising them into categories and pushing them live without touching any code.',
     tags: ['kod'],
     links: [
       {
         labelPl: 'Otwórz stronę',
         labelEn: 'Open the site',
         a11yPl: 'Otwórz stronę pracowni W Deseń',
-        a11yEn: 'Open the W Deseń studio website',
+        a11yEn: 'Open the site of the W Deseń studio',
         href: 'https://wdesen.eu.org',
       },
     ],
@@ -262,8 +262,8 @@ export const projects: Project[] = [
       {
         labelPl: 'Pobierz dodatek',
         labelEn: 'Download the add-on',
-        a11yPl: 'Pobierz najnowszy dodatek NVDA Apollo',
-        a11yEn: 'Download the latest Apollo NVDA add-on',
+        a11yPl: 'Pobierz dodatek NVDA dla syntezatora Apollo',
+        a11yEn: 'Download the add-on for the Apollo synthesizer',
         href: 'https://github.com/michaldziwisz/apollo/releases/latest',
       },
     ],
@@ -294,9 +294,9 @@ export const projects: Project[] = [
     namePl: 'Czyściciel',
     nameEn: 'Czyściciel',
     descPl:
-      'Program dla Windows, który automatycznie usuwa z nagrań mowy wtrącenia typu „yyy”, „eee” i skraca zbyt długie pauzy. Wykrywa je lokalnie, na komputerze użytkownika, modelem sztucznej inteligencji classla/wav2vecbert2-filledPause (nic nie jest wysyłane do sieci). Brzmi naturalnie, jest w pełni dostępny dla czytników ekranu i potrafi wyeksportować gotowy projekt do programu Reaper.',
+      'Program dla Windows, który automatycznie usuwa z nagrań mowy wtrącenia typu „yyy”, „eee” i skraca zbyt długie pauzy. Wykrywa je lokalnie, na komputerze użytkownika, modelem sztucznej inteligencji classla/wav2vecbert2-filledPause (nic nie jest wysyłane do sieci). Nagranie po obróbce brzmi naturalnie, a sam program jest w pełni dostępny dla czytników ekranu i potrafi wyeksportować gotowy projekt do programu Reaper.',
     descEn:
-      'A Windows app that automatically removes filler sounds like “um” and “uh” from speech recordings and shortens overly long pauses. It detects them locally, on the user’s own computer, with the classla/wav2vecbert2-filledPause AI model (nothing is sent to the cloud). It sounds natural, is fully accessible to screen readers, and can export a ready-made Reaper project.',
+      'A Windows app that automatically removes filler sounds like “um” and “uh” from speech recordings and shortens overly long pauses. It detects them locally, on the user’s own computer, with the classla/wav2vecbert2-filledPause AI model (nothing is sent to the cloud). The edited recording sounds natural, the app itself is fully accessible to screen readers, and it can export a ready-made Reaper project.',
     tags: ['kod', 'dostepnosc', 'media'],
     links: [
       {
@@ -350,7 +350,7 @@ export const projects: Project[] = [
     descPl:
       'Wtyczki DSP do słuchania audiobooków, podcastów i nagrań mowy: Bookamp dla Winampa, Bookbar dla foobara2000. Płynnie zmieniają tempo bez zmiany wysokości głosu, wysokość bez zmiany tempa oraz tryb „kasety”, który rusza jedno i drugie naraz. Mają dwa silniki rozciągania czasu, opcjonalne wyrównywanie głośności i poprawę czytelności mowy, a do tego skróty klawiszowe. Interfejs jest dwujęzyczny i w pełni dostępny dla czytników ekranu. Konsultacja merytoryczna: Patryk Faliszewski.',
     descEn:
-      'DSP plugins for listening to audiobooks, podcasts and spoken-word recordings: Bookamp for Winamp, Bookbar for foobar2000. They smoothly change tempo without changing pitch, pitch without changing tempo, and a „tape” mode that moves both at once. They have two time-stretch engines, optional loudness leveling and speech intelligibility enhancement, plus keyboard shortcuts. The interface is bilingual and fully accessible to screen readers. Subject-matter consultation: Patryk Faliszewski.',
+      'DSP plugins for listening to audiobooks, podcasts and spoken-word recordings: Bookamp for Winamp, Bookbar for foobar2000. They smoothly change tempo without changing pitch, pitch without changing tempo, and a “tape” mode that moves both at once. They have two time-stretch engines, optional loudness leveling and speech intelligibility enhancement, plus keyboard shortcuts. The interface is bilingual and fully accessible to screen readers. Subject-matter consultation: Patryk Faliszewski.',
     tags: ['kod', 'dostepnosc', 'media'],
     links: [
       {
@@ -389,9 +389,9 @@ export const projects: Project[] = [
     namePl: 'QAT (Winamp i foobar2000)',
     nameEn: 'QAT (Winamp & foobar2000)',
     descPl:
-      'QAT (Quality Audio Tester) to minimalistyczna wtyczka DSP bez okna i bez ustawień, obsługiwana dwoma klawiszami — w wersji dla Winampa i dla foobara2000. Służy głównie do sprawdzania kompatybilności mono nagrania: klawisz Q przełącza tryb stereo, sumę mono i sam sygnał różnicowy, a klawisz W włącza poprawę czytelności mowy. Konsultacja merytoryczna: Patryk Faliszewski.',
+      'QAT (Quality Audio Tester) to minimalistyczna wtyczka DSP bez okna i bez ustawień, obsługiwana dwoma klawiszami, w wersji dla Winampa i dla foobara2000. Służy głównie do sprawdzania kompatybilności mono nagrania: klawisz Q przełącza tryb stereo, sumę mono i sam sygnał różnicowy, a klawisz W włącza poprawę czytelności mowy. Konsultacja merytoryczna: Patryk Faliszewski.',
     descEn:
-      'QAT (Quality Audio Tester) is a minimalist DSP plugin with no window and no settings, controlled with two keys — available for Winamp and for foobar2000. It is meant mainly for checking the mono compatibility of a recording: the Q key switches between stereo, the mono sum and the difference signal, and the W key toggles speech clarity. Subject-matter consultation: Patryk Faliszewski.',
+      'QAT (Quality Audio Tester) is a minimalist DSP plugin with no window and no settings, controlled with two keys, available for Winamp and for foobar2000. It is meant mainly for checking the mono compatibility of a recording: the Q key switches between stereo, the mono sum and the difference signal, and the W key toggles speech clarity. Subject-matter consultation: Patryk Faliszewski.',
     tags: ['kod', 'dostepnosc', 'media'],
     links: [
       {

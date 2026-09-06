@@ -18,7 +18,10 @@ const featured = projects.filter((p) => p.featured);
     <div class="hero-text">
       <p class="eyebrow">{t('home.hero.eyebrow')}</p>
       <h1 id="hero-name">Michał Dziwisz</h1>
-      <p class="hero-tagline">{t('site.tagline')}</p>
+      {/* Podtytuł należy do nagłówka strony, nie jest osobną sekcją: <p> stylizowany
+          na nagłówek łamie WCAG 1.3.1 (axe p-as-heading), a <h2> tworzyłby sekcję,
+          której nie ma. Rola presentation zdejmuje semantykę akapitu. */}
+      <p class="hero-tagline" role="presentation">{t('site.tagline')}</p>
       <p class="lede hero-lede">{t('home.hero.lede')}</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href={localizedPath('/czym-sie-zajmuje', lang)}>
