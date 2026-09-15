@@ -77,20 +77,20 @@ export const projects: Project[] = [
   {
     id: 'utilitia',
     featured: true,
-    namePl: 'UTILITIA 2.0',
-    nameEn: 'UTILITIA 2.0',
+    namePl: 'Utilitia Access',
+    nameEn: 'Utilitia Access',
     descPl:
-      'Narzędzie do badania dostępności cyfrowej. Analizuje strony i dokumenty pod kątem zgodności ze standardami (WCAG, PDF/UA). Wersja rozwojowa.',
+      'Narzędzie do badania dostępności cyfrowej. Analizuje strony i dokumenty pod kątem zgodności ze standardami (WCAG, PDF/UA).',
     descEn:
-      'A tool for auditing digital accessibility. It analyses websites and documents against standards (WCAG, PDF/UA). Beta version.',
+      'A tool for auditing digital accessibility. It analyses websites and documents against standards (WCAG, PDF/UA).',
     tags: ['dostepnosc', 'kod'],
     links: [
       {
-        labelPl: 'Otwórz betę',
-        labelEn: 'Open the beta',
-        a11yPl: 'Otwórz betę UTILITII',
-        a11yEn: 'Open the beta of UTILITIA',
-        href: 'https://beta.utilitia.pl',
+        labelPl: 'Otwórz',
+        labelEn: 'Open',
+        a11yPl: 'Otwórz Utilitia Access',
+        a11yEn: 'Open Utilitia Access',
+        href: 'https://access.utilitia.pl',
       },
     ],
   },
