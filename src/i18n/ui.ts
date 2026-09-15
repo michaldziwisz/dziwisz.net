@@ -53,6 +53,7 @@ export const ui = {
     'work.visit': 'Otwórz',
     'work.repo': 'Kod źródłowy',
     'work.platforms': 'Platformy',
+    'work.tech': 'Technologie',
 
     'about.photoAlt':
       'Uśmiechnięty Michał w jasnym kaszkiecie i beżowej koszulce z nadrukiem kotów rasy ragdoll, na tle tapety z tym samym kocim wzorem; obok napis „Mam kota na punkcie kota?”.',
@@ -121,6 +122,7 @@ export const ui = {
     'work.visit': 'Open',
     'work.repo': 'Source code',
     'work.platforms': 'Platforms',
+    'work.tech': 'Technologies',
 
     'about.photoAlt':
       'Smiling Michał in a light flat cap and a beige t-shirt printed with ragdoll cats, against wallpaper with the same cat pattern; next to it the Polish caption „Mam kota na punkcie kota?” (crazy about cats).',

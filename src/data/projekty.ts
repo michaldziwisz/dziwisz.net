@@ -24,6 +24,11 @@ export interface Project {
   descPl: string;
   descEn: string;
   tags: Tag[];
+  /**
+   * Główne technologie projektu (nazwy własne, więc bez tłumaczenia).
+   * Świadomie krótka lista: liczy się to, na czym rzecz stoi, nie spis zależności.
+   */
+  tech: string[];
   links: ProjectLink[];
 }
 
@@ -44,6 +49,7 @@ export const projects: Project[] = [
     descEn:
       'A podcast platform about technology and accessibility for blind and partially sighted people. I am its founder and editor-in-chief.',
     tags: ['media', 'dostepnosc'],
+    tech: ['WordPress', 'PHP'],
     links: [
       {
         labelPl: 'Otwórz serwis',
@@ -64,6 +70,7 @@ export const projects: Project[] = [
     descEn:
       'An internet radio station and its main channel. I am a co-creator of the channel format.',
     tags: ['media'],
+    tech: ['Astro', 'Cloudflare', 'HLS'],
     links: [
       {
         labelPl: 'Posłuchaj',
@@ -84,6 +91,7 @@ export const projects: Project[] = [
     descEn:
       'A tool for auditing digital accessibility. It analyses websites and documents against standards (WCAG, PDF/UA).',
     tags: ['dostepnosc', 'kod'],
+    tech: ['Python', 'FastAPI', 'PostgreSQL', 'Docker', 'Playwright'],
     links: [
       {
         labelPl: 'Otwórz',
@@ -104,6 +112,7 @@ export const projects: Project[] = [
     descEn:
       'Simple Accessible Radio Automation, an accessible radio automation system. Open-source software written in Python.',
     tags: ['media', 'kod', 'dostepnosc'],
+    tech: ['Python', 'wxPython', 'BASS'],
     links: [
       {
         labelPl: 'Kod źródłowy',
@@ -124,6 +133,7 @@ export const projects: Project[] = [
     descEn:
       'TyfloPodcast clients for three platforms: Windows, Android and iOS. The interface is designed for accessibility and screen readers (NVDA, TalkBack, VoiceOver).',
     tags: ['media', 'kod', 'dostepnosc'],
+    tech: ['.NET 8', 'WinUI 3', 'Kotlin', 'Jetpack Compose', 'Swift', 'SwiftUI'],
     links: [
       {
         labelPl: 'Windows',
@@ -158,6 +168,7 @@ export const projects: Project[] = [
     descEn:
       'An accessible frontend for e-podroznik.pl: a connection search and stop timetable, friendly to screen readers.',
     tags: ['dostepnosc', 'kod'],
+    tech: ['PHP'],
     links: [
       {
         labelPl: 'Otwórz',
@@ -178,6 +189,7 @@ export const projects: Project[] = [
     descEn:
       'An app for viewing TV and radio programme schedules, friendly to screen reader users.',
     tags: ['media', 'kod'],
+    tech: ['Python', 'wxPython', 'SQLite'],
     links: [
       {
         labelPl: 'Pobierz',
@@ -198,6 +210,7 @@ export const projects: Project[] = [
     descEn:
       'A set of accessible Windows GUI apps for music recognition (Shazam): from a file, from audio input or output, and updating “now playing” on Shoutcast and Icecast streams.',
     tags: ['media', 'kod', 'dostepnosc'],
+    tech: ['Python', 'wxPython', 'shazamio', 'FFmpeg'],
     links: [
       {
         labelPl: 'Pobierz',
@@ -218,6 +231,7 @@ export const projects: Project[] = [
     descEn:
       'An accessible Windows GUI browser for Usenet newsgroup archives (Usenet Archive Toolkit).',
     tags: ['kod', 'dostepnosc'],
+    tech: ['C++'],
     links: [
       {
         labelPl: 'Pobierz',
@@ -238,6 +252,7 @@ export const projects: Project[] = [
     descEn:
       'A website for Monika Machul’s craft studio “W Deseń”. I built it with the Astro framework and additionally created a convenient tool that lets the author publish photos of her work herself: adding them, organising them into categories and pushing them live without touching any code.',
     tags: ['kod'],
+    tech: ['Astro', 'Cloudflare'],
     links: [
       {
         labelPl: 'Otwórz stronę',
@@ -258,6 +273,7 @@ export const projects: Project[] = [
     descEn:
       'An NVDA driver for the Dolphin Apollo 2 hardware speech synthesizer (and Juno). It lets you use these synthesizers as the voice of the NVDA screen reader. Distributed as an NVDA add-on.',
     tags: ['dostepnosc', 'kod'],
+    tech: ['Python', 'NVDA API', 'pyserial'],
     links: [
       {
         labelPl: 'Pobierz dodatek',
@@ -278,6 +294,7 @@ export const projects: Project[] = [
     descEn:
       'A simple, accessible (NVDA/JAWS) Windows app for removing all digital signatures from PDF files.',
     tags: ['dostepnosc', 'kod'],
+    tech: ['Python', 'wxPython', 'pikepdf'],
     links: [
       {
         labelPl: 'Pobierz',
@@ -298,6 +315,7 @@ export const projects: Project[] = [
     descEn:
       'A Windows app that automatically removes filler sounds like “um” and “uh” from speech recordings and shortens overly long pauses. It detects them locally, on the user’s own computer, with the classla/wav2vecbert2-filledPause AI model (nothing is sent to the cloud). The edited recording sounds natural, the app itself is fully accessible to screen readers, and it can export a ready-made Reaper project.',
     tags: ['kod', 'dostepnosc', 'media'],
+    tech: ['Python', 'wxPython', 'PyTorch', 'ONNX Runtime', 'FFmpeg'],
     links: [
       {
         labelPl: 'Pobierz',
@@ -325,6 +343,7 @@ export const projects: Project[] = [
     descEn:
       'A laboratory AAC audio encoder for power users. It takes the Fraunhofer library (libfdk-aac) and exposes its normally hardcoded internal decisions as command-line switches: per-band joint stereo control, SBR density, parametric stereo, noise shaping, core bandwidth cutoff and much more. A tool for experimenting with and inspecting what the encoder does on its own. Subject-matter consultation: Patryk Faliszewski.',
     tags: ['kod', 'media'],
+    tech: ['C++', 'libfdk-aac'],
     links: [
       {
         labelPl: 'Pobierz',
@@ -352,6 +371,7 @@ export const projects: Project[] = [
     descEn:
       'DSP plugins for listening to audiobooks, podcasts and spoken-word recordings: Bookamp for Winamp, Bookbar for foobar2000. They smoothly change tempo without changing pitch, pitch without changing tempo, and a “tape” mode that moves both at once. They have two time-stretch engines, optional loudness leveling and speech intelligibility enhancement, plus keyboard shortcuts. The interface is bilingual and fully accessible to screen readers. Subject-matter consultation: Patryk Faliszewski.',
     tags: ['kod', 'dostepnosc', 'media'],
+    tech: ['C++', 'Winamp SDK', 'foobar2000 SDK', 'SoundTouch', 'Bungee'],
     links: [
       {
         labelPl: 'Pobierz Bookampa (Winamp)',
@@ -393,6 +413,7 @@ export const projects: Project[] = [
     descEn:
       'QAT (Quality Audio Tester) is a minimalist DSP plugin with no window and no settings, controlled with two keys, available for Winamp and for foobar2000. It is meant mainly for checking the mono compatibility of a recording: the Q key switches between stereo, the mono sum and the difference signal, and the W key toggles speech clarity. Subject-matter consultation: Patryk Faliszewski.',
     tags: ['kod', 'dostepnosc', 'media'],
+    tech: ['C++', 'Winamp SDK', 'foobar2000 SDK'],
     links: [
       {
         labelPl: 'Pobierz QAT dla Winampa',

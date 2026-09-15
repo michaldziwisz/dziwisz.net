@@ -7,7 +7,7 @@ import {
   linkA11yLabel,
   tagLabels,
 } from '../data/projekty';
-import type { Lang } from '../i18n/ui';
+import { useTranslations, type Lang } from '../i18n/ui';
 
 interface Props {
   project: Project;
@@ -16,6 +16,7 @@ interface Props {
   headingLevel?: 2 | 3;
 }
 const { project, lang, headingLevel = 3 } = Astro.props;
+const t = useTranslations(lang);
 const Heading = `h${headingLevel}` as 'h2' | 'h3';
 const name = projectName(project, lang);
 const desc = projectDesc(project, lang);
@@ -25,6 +26,13 @@ const desc = projectDesc(project, lang);
   <div class="card-body">
     <Heading class="card-title">{name}</Heading>
     <p class="card-desc">{desc}</p>
+    {
+      project.tech.length > 0 && (
+        <p class="card-tech">
+          <span class="card-tech-label">{t('work.tech')}:</span> {project.tech.join(', ')}
+        </p>
+      )
+    }
     <ul class="card-tags" aria-hidden="true">
       {project.tags.map((tag) => <li class="tag">{tagLabels[tag][lang]}</li>)}
     </ul>
@@ -76,6 +84,16 @@ const desc = projectDesc(project, lang);
     margin: 0 0 var(--space-2);
     color: var(--text-muted);
     max-width: none;
+  }
+  .card-tech {
+    margin: 0 0 var(--space-2);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    max-width: none;
+  }
+  .card-tech-label {
+    font-weight: 600;
+    color: var(--text);
   }
   .card-tags {
     display: flex;
