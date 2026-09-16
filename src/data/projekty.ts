@@ -152,9 +152,9 @@ export const projects: Project[] = [
       {
         labelPl: 'iOS',
         labelEn: 'iOS',
-        a11yPl: 'iOS: pobierz TyfloCentrum przez TestFlight',
-        a11yEn: 'iOS: get TyfloCentrum via TestFlight',
-        href: 'https://testflight.apple.com/join/F8vtxp8v',
+        a11yPl: 'iOS: pobierz TyfloCentrum z App Store',
+        a11yEn: 'iOS: get TyfloCentrum from the App Store',
+        href: 'https://apps.apple.com/pl/app/tyflocentrum/id6809841876',
       },
     ],
   },
